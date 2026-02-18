@@ -1,0 +1,5040 @@
+{
+  "bulbasaur": {
+    "id": 1,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Seed Pokémon",
+    "body_style": "quadruped",
+    "height": 0.7,
+    "weight": 6.9,
+    "base_stats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 49,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "abilities": [
+      "overgrow"
+    ],
+    "hidden_ability": "chlorophyll",
+    "egg_groups": [
+      "monster",
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "ivysaur": {
+    "id": 2,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Seed Pokémon",
+    "body_style": "quadruped",
+    "height": 1.0,
+    "weight": 13.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 63,
+      "spa": 80,
+      "spd": 80,
+      "spe": 60
+    },
+    "abilities": [
+      "overgrow"
+    ],
+    "hidden_ability": "chlorophyll",
+    "egg_groups": [
+      "monster",
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "venusaur": {
+    "id": 3,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Seed Pokémon",
+    "body_style": "quadruped",
+    "height": 2.0,
+    "weight": 100.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 83,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "abilities": [
+      "overgrow"
+    ],
+    "hidden_ability": "chlorophyll",
+    "egg_groups": [
+      "monster",
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "charmander": {
+    "id": 4,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Lizard Pokémon",
+    "body_style": "bipedal",
+    "height": 0.6,
+    "weight": 8.5,
+    "base_stats": {
+      "hp": 39,
+      "atk": 52,
+      "def": 43,
+      "spa": 60,
+      "spd": 50,
+      "spe": 65
+    },
+    "abilities": [
+      "blaze"
+    ],
+    "hidden_ability": "solar-power",
+    "egg_groups": [
+      "monster",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "charmeleon": {
+    "id": 5,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Flame Pokémon",
+    "body_style": "bipedal",
+    "height": 1.1,
+    "weight": 19.0,
+    "base_stats": {
+      "hp": 58,
+      "atk": 64,
+      "def": 58,
+      "spa": 80,
+      "spd": 65,
+      "spe": 80
+    },
+    "abilities": [
+      "blaze"
+    ],
+    "hidden_ability": "solar-power",
+    "egg_groups": [
+      "monster",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "charizard": {
+    "id": 6,
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Flame Pokémon",
+    "body_style": "bipedal",
+    "height": 1.7,
+    "weight": 90.5,
+    "base_stats": {
+      "hp": 78,
+      "atk": 84,
+      "def": 78,
+      "spa": 109,
+      "spd": 85,
+      "spe": 100
+    },
+    "abilities": [
+      "blaze"
+    ],
+    "hidden_ability": "solar-power",
+    "egg_groups": [
+      "monster",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "squirtle": {
+    "id": 7,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Tiny Turtle Pokémon",
+    "body_style": "bipedal",
+    "height": 0.5,
+    "weight": 9.0,
+    "base_stats": {
+      "hp": 44,
+      "atk": 48,
+      "def": 65,
+      "spa": 50,
+      "spd": 64,
+      "spe": 43
+    },
+    "abilities": [
+      "torrent"
+    ],
+    "hidden_ability": "rain-dish",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "wartortle": {
+    "id": 8,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Turtle Pokémon",
+    "body_style": "bipedal",
+    "height": 1.0,
+    "weight": 22.5,
+    "base_stats": {
+      "hp": 59,
+      "atk": 63,
+      "def": 80,
+      "spa": 65,
+      "spd": 80,
+      "spe": 58
+    },
+    "abilities": [
+      "torrent"
+    ],
+    "hidden_ability": "rain-dish",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "blastoise": {
+    "id": 9,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Shellfish Pokémon",
+    "body_style": "bipedal",
+    "height": 1.6,
+    "weight": 85.5,
+    "base_stats": {
+      "hp": 79,
+      "atk": 83,
+      "def": 100,
+      "spa": 85,
+      "spd": 105,
+      "spe": 78
+    },
+    "abilities": [
+      "torrent"
+    ],
+    "hidden_ability": "rain-dish",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "caterpie": {
+    "id": 10,
+    "types": [
+      "bug"
+    ],
+    "gen": 1,
+    "species": "Worm Pokémon",
+    "body_style": "armored",
+    "height": 0.3,
+    "weight": 2.9,
+    "base_stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 35,
+      "spa": 20,
+      "spd": 20,
+      "spe": 45
+    },
+    "abilities": [
+      "shield-dust"
+    ],
+    "hidden_ability": "run-away",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "metapod": {
+    "id": 11,
+    "types": [
+      "bug"
+    ],
+    "gen": 1,
+    "species": "Cocoon Pokémon",
+    "body_style": "serpentine",
+    "height": 0.7,
+    "weight": 9.9,
+    "base_stats": {
+      "hp": 50,
+      "atk": 20,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 30
+    },
+    "abilities": [
+      "shed-skin"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "butterfree": {
+    "id": 12,
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Butterfly Pokémon",
+    "body_style": "winged",
+    "height": 1.1,
+    "weight": 32.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 45,
+      "def": 50,
+      "spa": 90,
+      "spd": 80,
+      "spe": 70
+    },
+    "abilities": [
+      "compound-eyes"
+    ],
+    "hidden_ability": "tinted-lens",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "weedle": {
+    "id": 13,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Hairy Bug Pokémon",
+    "body_style": "armored",
+    "height": 0.3,
+    "weight": 3.2,
+    "base_stats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 20,
+      "spd": 20,
+      "spe": 50
+    },
+    "abilities": [
+      "shield-dust"
+    ],
+    "hidden_ability": "run-away",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "kakuna": {
+    "id": 14,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Cocoon Pokémon",
+    "body_style": "serpentine",
+    "height": 0.6,
+    "weight": 10.0,
+    "base_stats": {
+      "hp": 45,
+      "atk": 25,
+      "def": 50,
+      "spa": 25,
+      "spd": 25,
+      "spe": 35
+    },
+    "abilities": [
+      "shed-skin"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "beedrill": {
+    "id": 15,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Bee Pokémon",
+    "body_style": "winged",
+    "height": 1.0,
+    "weight": 29.5,
+    "base_stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 40,
+      "spa": 45,
+      "spd": 80,
+      "spe": 75
+    },
+    "abilities": [
+      "swarm"
+    ],
+    "hidden_ability": "sniper",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "pidgey": {
+    "id": 16,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Tiny Bird Pokémon",
+    "body_style": "winged",
+    "height": 0.3,
+    "weight": 1.8,
+    "base_stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 35,
+      "spd": 35,
+      "spe": 56
+    },
+    "abilities": [
+      "keen-eye",
+      "tangled-feet"
+    ],
+    "hidden_ability": "big-pecks",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "pidgeotto": {
+    "id": 17,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Bird Pokémon",
+    "body_style": "winged",
+    "height": 1.1,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 63,
+      "atk": 60,
+      "def": 55,
+      "spa": 50,
+      "spd": 50,
+      "spe": 71
+    },
+    "abilities": [
+      "keen-eye",
+      "tangled-feet"
+    ],
+    "hidden_ability": "big-pecks",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "pidgeot": {
+    "id": 18,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Bird Pokémon",
+    "body_style": "winged",
+    "height": 1.5,
+    "weight": 39.5,
+    "base_stats": {
+      "hp": 83,
+      "atk": 80,
+      "def": 75,
+      "spa": 70,
+      "spd": 70,
+      "spe": 101
+    },
+    "abilities": [
+      "keen-eye",
+      "tangled-feet"
+    ],
+    "hidden_ability": "big-pecks",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "rattata": {
+    "id": 19,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "quadruped",
+    "height": 0.3,
+    "weight": 3.5,
+    "base_stats": {
+      "hp": 30,
+      "atk": 56,
+      "def": 35,
+      "spa": 25,
+      "spd": 35,
+      "spe": 72
+    },
+    "abilities": [
+      "run-away",
+      "guts"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "raticate": {
+    "id": 20,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "quadruped",
+    "height": 0.7,
+    "weight": 18.5,
+    "base_stats": {
+      "hp": 55,
+      "atk": 81,
+      "def": 60,
+      "spa": 50,
+      "spd": 70,
+      "spe": 97
+    },
+    "abilities": [
+      "run-away",
+      "guts"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "spearow": {
+    "id": 21,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Tiny Bird Pokémon",
+    "body_style": "winged",
+    "height": 0.3,
+    "weight": 2.0,
+    "base_stats": {
+      "hp": 40,
+      "atk": 60,
+      "def": 30,
+      "spa": 31,
+      "spd": 31,
+      "spe": 70
+    },
+    "abilities": [
+      "keen-eye"
+    ],
+    "hidden_ability": "sniper",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "fearow": {
+    "id": 22,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Beak Pokémon",
+    "body_style": "winged",
+    "height": 1.2,
+    "weight": 38.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 65,
+      "spa": 61,
+      "spd": 61,
+      "spe": 100
+    },
+    "abilities": [
+      "keen-eye"
+    ],
+    "hidden_ability": "sniper",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "ekans": {
+    "id": 23,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Snake Pokémon",
+    "body_style": "serpentine",
+    "height": 2.0,
+    "weight": 6.9,
+    "base_stats": {
+      "hp": 35,
+      "atk": 60,
+      "def": 44,
+      "spa": 40,
+      "spd": 54,
+      "spe": 55
+    },
+    "abilities": [
+      "intimidate",
+      "shed-skin"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "ground",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "arbok": {
+    "id": 24,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Cobra Pokémon",
+    "body_style": "serpentine",
+    "height": 3.5,
+    "weight": 65.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 95,
+      "def": 69,
+      "spa": 65,
+      "spd": 79,
+      "spe": 80
+    },
+    "abilities": [
+      "intimidate",
+      "shed-skin"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "ground",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "pikachu": {
+    "id": 25,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "quadruped",
+    "height": 0.4,
+    "weight": 6.0,
+    "base_stats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 40,
+      "spa": 50,
+      "spd": 50,
+      "spe": 90
+    },
+    "abilities": [
+      "static"
+    ],
+    "hidden_ability": "lightning-rod",
+    "egg_groups": [
+      "ground",
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "raichu": {
+    "id": 26,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "bipedal",
+    "height": 0.8,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 55,
+      "spa": 90,
+      "spd": 80,
+      "spe": 110
+    },
+    "abilities": [
+      "static"
+    ],
+    "hidden_ability": "lightning-rod",
+    "egg_groups": [
+      "ground",
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "sandshrew": {
+    "id": 27,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "bipedal",
+    "height": 0.6,
+    "weight": 12.0,
+    "base_stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 85,
+      "spa": 20,
+      "spd": 30,
+      "spe": 40
+    },
+    "abilities": [
+      "sand-veil"
+    ],
+    "hidden_ability": "sand-rush",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "sandslash": {
+    "id": 28,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Mouse Pokémon",
+    "body_style": "bipedal",
+    "height": 1.0,
+    "weight": 29.5,
+    "base_stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 110,
+      "spa": 45,
+      "spd": 55,
+      "spe": 65
+    },
+    "abilities": [
+      "sand-veil"
+    ],
+    "hidden_ability": "sand-rush",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "nidoran-f": {
+    "id": 29,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Pin Pokémon",
+    "body_style": "quadruped",
+    "height": 0.4,
+    "weight": 7.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 47,
+      "def": 52,
+      "spa": 40,
+      "spd": 40,
+      "spe": 41
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "nidorina": {
+    "id": 30,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Pin Pokémon",
+    "body_style": "quadruped",
+    "height": 0.8,
+    "weight": 20.0,
+    "base_stats": {
+      "hp": 70,
+      "atk": 62,
+      "def": 67,
+      "spa": 55,
+      "spd": 55,
+      "spe": 56
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "nidoqueen": {
+    "id": 31,
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Drill Pokémon",
+    "body_style": "bipedal",
+    "height": 1.3,
+    "weight": 60.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 92,
+      "def": 87,
+      "spa": 75,
+      "spd": 85,
+      "spe": 76
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "sheer-force",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "nidoran-m": {
+    "id": 32,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Pin Pokémon",
+    "body_style": "quadruped",
+    "height": 0.5,
+    "weight": 9.0,
+    "base_stats": {
+      "hp": 46,
+      "atk": 57,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 50
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "nidorino": {
+    "id": 33,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Pin Pokémon",
+    "body_style": "quadruped",
+    "height": 0.9,
+    "weight": 19.5,
+    "base_stats": {
+      "hp": 61,
+      "atk": 72,
+      "def": 57,
+      "spa": 55,
+      "spd": 55,
+      "spe": 65
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "hustle",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "nidoking": {
+    "id": 34,
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Drill Pokémon",
+    "body_style": "bipedal",
+    "height": 1.4,
+    "weight": 62.0,
+    "base_stats": {
+      "hp": 81,
+      "atk": 102,
+      "def": 77,
+      "spa": 85,
+      "spd": 75,
+      "spe": 85
+    },
+    "abilities": [
+      "poison-point",
+      "rivalry"
+    ],
+    "hidden_ability": "sheer-force",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "clefairy": {
+    "id": 35,
+    "types": [
+      "fairy"
+    ],
+    "gen": 1,
+    "species": "Fairy Pokémon",
+    "body_style": "bipedal",
+    "height": 0.6,
+    "weight": 7.5,
+    "base_stats": {
+      "hp": 70,
+      "atk": 45,
+      "def": 48,
+      "spa": 60,
+      "spd": 65,
+      "spe": 35
+    },
+    "abilities": [
+      "cute-charm",
+      "magic-guard"
+    ],
+    "hidden_ability": "friend-guard",
+    "egg_groups": [
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "clefable": {
+    "id": 36,
+    "types": [
+      "fairy"
+    ],
+    "gen": 1,
+    "species": "Fairy Pokémon",
+    "body_style": "bipedal",
+    "height": 1.3,
+    "weight": 40.0,
+    "base_stats": {
+      "hp": 95,
+      "atk": 70,
+      "def": 73,
+      "spa": 95,
+      "spd": 90,
+      "spe": 60
+    },
+    "abilities": [
+      "cute-charm",
+      "magic-guard"
+    ],
+    "hidden_ability": "unaware",
+    "egg_groups": [
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "vulpix": {
+    "id": 37,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Fox Pokémon",
+    "body_style": "quadruped",
+    "height": 0.6,
+    "weight": 9.9,
+    "base_stats": {
+      "hp": 38,
+      "atk": 41,
+      "def": 40,
+      "spa": 50,
+      "spd": 65,
+      "spe": 65
+    },
+    "abilities": [
+      "flash-fire"
+    ],
+    "hidden_ability": "drought",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "ninetales": {
+    "id": 38,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Fox Pokémon",
+    "body_style": "quadruped",
+    "height": 1.1,
+    "weight": 19.9,
+    "base_stats": {
+      "hp": 73,
+      "atk": 76,
+      "def": 75,
+      "spa": 81,
+      "spd": 100,
+      "spe": 100
+    },
+    "abilities": [
+      "flash-fire"
+    ],
+    "hidden_ability": "drought",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "jigglypuff": {
+    "id": 39,
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "gen": 1,
+    "species": "Balloon Pokémon",
+    "body_style": "humanoid",
+    "height": 0.5,
+    "weight": 5.5,
+    "base_stats": {
+      "hp": 115,
+      "atk": 45,
+      "def": 20,
+      "spa": 45,
+      "spd": 25,
+      "spe": 20
+    },
+    "abilities": [
+      "cute-charm",
+      "competitive"
+    ],
+    "hidden_ability": "friend-guard",
+    "egg_groups": [
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "wigglytuff": {
+    "id": 40,
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "gen": 1,
+    "species": "Balloon Pokémon",
+    "body_style": "humanoid",
+    "height": 1.0,
+    "weight": 12.0,
+    "base_stats": {
+      "hp": 140,
+      "atk": 70,
+      "def": 45,
+      "spa": 85,
+      "spd": 50,
+      "spe": 45
+    },
+    "abilities": [
+      "cute-charm",
+      "competitive"
+    ],
+    "hidden_ability": "frisk",
+    "egg_groups": [
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "zubat": {
+    "id": 41,
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Bat Pokémon",
+    "body_style": "winged",
+    "height": 0.8,
+    "weight": 7.5,
+    "base_stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 30,
+      "spd": 40,
+      "spe": 55
+    },
+    "abilities": [
+      "inner-focus"
+    ],
+    "hidden_ability": "infiltrator",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "golbat": {
+    "id": 42,
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Bat Pokémon",
+    "body_style": "winged",
+    "height": 1.6,
+    "weight": 55.0,
+    "base_stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 70,
+      "spa": 65,
+      "spd": 75,
+      "spe": 90
+    },
+    "abilities": [
+      "inner-focus"
+    ],
+    "hidden_ability": "infiltrator",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "oddish": {
+    "id": 43,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Weed Pokémon",
+    "body_style": "bipedal",
+    "height": 0.5,
+    "weight": 5.4,
+    "base_stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 55,
+      "spa": 75,
+      "spd": 65,
+      "spe": 30
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "run-away",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "gloom": {
+    "id": 44,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Weed Pokémon",
+    "body_style": "humanoid",
+    "height": 0.8,
+    "weight": 8.6,
+    "base_stats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "stench",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "vileplume": {
+    "id": 45,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Flower Pokémon",
+    "body_style": "humanoid",
+    "height": 1.2,
+    "weight": 18.6,
+    "base_stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 85,
+      "spa": 110,
+      "spd": 90,
+      "spe": 50
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "effect-spore",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "paras": {
+    "id": 46,
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "gen": 1,
+    "species": "Mushroom Pokémon",
+    "body_style": "armored",
+    "height": 0.3,
+    "weight": 5.4,
+    "base_stats": {
+      "hp": 35,
+      "atk": 70,
+      "def": 55,
+      "spa": 45,
+      "spd": 55,
+      "spe": 25
+    },
+    "abilities": [
+      "effect-spore",
+      "dry-skin"
+    ],
+    "hidden_ability": "damp",
+    "egg_groups": [
+      "bug",
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "parasect": {
+    "id": 47,
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "gen": 1,
+    "species": "Mushroom Pokémon",
+    "body_style": "armored",
+    "height": 1.0,
+    "weight": 29.5,
+    "base_stats": {
+      "hp": 60,
+      "atk": 95,
+      "def": 80,
+      "spa": 60,
+      "spd": 80,
+      "spe": 30
+    },
+    "abilities": [
+      "effect-spore",
+      "dry-skin"
+    ],
+    "hidden_ability": "damp",
+    "egg_groups": [
+      "bug",
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "venonat": {
+    "id": 48,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Insect Pokémon",
+    "body_style": "humanoid",
+    "height": 1.0,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 50,
+      "spa": 40,
+      "spd": 55,
+      "spe": 45
+    },
+    "abilities": [
+      "compound-eyes",
+      "tinted-lens"
+    ],
+    "hidden_ability": "run-away",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "venomoth": {
+    "id": 49,
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Moth Pokémon",
+    "body_style": "winged",
+    "height": 1.5,
+    "weight": 12.5,
+    "base_stats": {
+      "hp": 70,
+      "atk": 65,
+      "def": 60,
+      "spa": 90,
+      "spd": 75,
+      "spe": 90
+    },
+    "abilities": [
+      "shield-dust",
+      "tinted-lens"
+    ],
+    "hidden_ability": "wonder-skin",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "diglett": {
+    "id": 50,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Mole Pokémon",
+    "body_style": "blob",
+    "height": 0.2,
+    "weight": 0.8,
+    "base_stats": {
+      "hp": 10,
+      "atk": 55,
+      "def": 25,
+      "spa": 35,
+      "spd": 45,
+      "spe": 95
+    },
+    "abilities": [
+      "sand-veil",
+      "arena-trap"
+    ],
+    "hidden_ability": "sand-force",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "dugtrio": {
+    "id": 51,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Mole Pokémon",
+    "body_style": "multi-head",
+    "height": 0.7,
+    "weight": 33.3,
+    "base_stats": {
+      "hp": 35,
+      "atk": 100,
+      "def": 50,
+      "spa": 50,
+      "spd": 70,
+      "spe": 120
+    },
+    "abilities": [
+      "sand-veil",
+      "arena-trap"
+    ],
+    "hidden_ability": "sand-force",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "meowth": {
+    "id": 52,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Scratch Cat Pokémon",
+    "body_style": "quadruped",
+    "height": 0.4,
+    "weight": 4.2,
+    "base_stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "abilities": [
+      "pickup",
+      "technician"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "persian": {
+    "id": 53,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Classy Cat Pokémon",
+    "body_style": "quadruped",
+    "height": 1.0,
+    "weight": 32.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 70,
+      "def": 60,
+      "spa": 65,
+      "spd": 65,
+      "spe": 115
+    },
+    "abilities": [
+      "limber",
+      "technician"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "psyduck": {
+    "id": 54,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Duck Pokémon",
+    "body_style": "bipedal",
+    "height": 0.8,
+    "weight": 19.6,
+    "base_stats": {
+      "hp": 50,
+      "atk": 52,
+      "def": 48,
+      "spa": 65,
+      "spd": 50,
+      "spe": 55
+    },
+    "abilities": [
+      "damp",
+      "cloud-nine"
+    ],
+    "hidden_ability": "swift-swim",
+    "egg_groups": [
+      "water1",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "golduck": {
+    "id": 55,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Duck Pokémon",
+    "body_style": "bipedal",
+    "height": 1.7,
+    "weight": 76.6,
+    "base_stats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 78,
+      "spa": 95,
+      "spd": 80,
+      "spe": 85
+    },
+    "abilities": [
+      "damp",
+      "cloud-nine"
+    ],
+    "hidden_ability": "swift-swim",
+    "egg_groups": [
+      "water1",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "mankey": {
+    "id": 56,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Pig Monkey Pokémon",
+    "body_style": "bipedal",
+    "height": 0.5,
+    "weight": 28.0,
+    "base_stats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 35,
+      "spa": 35,
+      "spd": 45,
+      "spe": 70
+    },
+    "abilities": [
+      "vital-spirit",
+      "anger-point"
+    ],
+    "hidden_ability": "defiant",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "primeape": {
+    "id": 57,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Pig Monkey Pokémon",
+    "body_style": "bipedal",
+    "height": 1.0,
+    "weight": 32.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 105,
+      "def": 60,
+      "spa": 60,
+      "spd": 70,
+      "spe": 95
+    },
+    "abilities": [
+      "vital-spirit",
+      "anger-point"
+    ],
+    "hidden_ability": "defiant",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "growlithe": {
+    "id": 58,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Puppy Pokémon",
+    "body_style": "quadruped",
+    "height": 0.7,
+    "weight": 19.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 45,
+      "spa": 70,
+      "spd": 50,
+      "spe": 60
+    },
+    "abilities": [
+      "intimidate",
+      "flash-fire"
+    ],
+    "hidden_ability": "justified",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "arcanine": {
+    "id": 59,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Legendary Pokémon",
+    "body_style": "quadruped",
+    "height": 1.9,
+    "weight": 155.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 110,
+      "def": 80,
+      "spa": 100,
+      "spd": 80,
+      "spe": 95
+    },
+    "abilities": [
+      "intimidate",
+      "flash-fire"
+    ],
+    "hidden_ability": "justified",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "poliwag": {
+    "id": 60,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Tadpole Pokémon",
+    "body_style": "bipedal",
+    "height": 0.6,
+    "weight": 12.4,
+    "base_stats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "abilities": [
+      "water-absorb",
+      "damp"
+    ],
+    "hidden_ability": "swift-swim",
+    "egg_groups": [
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "poliwhirl": {
+    "id": 61,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Tadpole Pokémon",
+    "body_style": "humanoid",
+    "height": 1.0,
+    "weight": 20.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 65,
+      "spa": 50,
+      "spd": 50,
+      "spe": 90
+    },
+    "abilities": [
+      "water-absorb",
+      "damp"
+    ],
+    "hidden_ability": "swift-swim",
+    "egg_groups": [
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "poliwrath": {
+    "id": 62,
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Tadpole Pokémon",
+    "body_style": "humanoid",
+    "height": 1.3,
+    "weight": 54.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 95,
+      "def": 95,
+      "spa": 70,
+      "spd": 90,
+      "spe": 70
+    },
+    "abilities": [
+      "water-absorb",
+      "damp"
+    ],
+    "hidden_ability": "swift-swim",
+    "egg_groups": [
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "abra": {
+    "id": 63,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Psi Pokémon",
+    "body_style": "bipedal",
+    "height": 0.9,
+    "weight": 19.5,
+    "base_stats": {
+      "hp": 25,
+      "atk": 20,
+      "def": 15,
+      "spa": 105,
+      "spd": 55,
+      "spe": 90
+    },
+    "abilities": [
+      "synchronize",
+      "inner-focus"
+    ],
+    "hidden_ability": "magic-guard",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "kadabra": {
+    "id": 64,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Psi Pokémon",
+    "body_style": "bipedal",
+    "height": 1.3,
+    "weight": 56.5,
+    "base_stats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 120,
+      "spd": 70,
+      "spe": 105
+    },
+    "abilities": [
+      "synchronize",
+      "inner-focus"
+    ],
+    "hidden_ability": "magic-guard",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "alakazam": {
+    "id": 65,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Psi Pokémon",
+    "body_style": "humanoid",
+    "height": 1.5,
+    "weight": 48.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 50,
+      "def": 45,
+      "spa": 135,
+      "spd": 95,
+      "spe": 120
+    },
+    "abilities": [
+      "synchronize",
+      "inner-focus"
+    ],
+    "hidden_ability": "magic-guard",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "machop": {
+    "id": 66,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Superpower Pokémon",
+    "body_style": "bipedal",
+    "height": 0.8,
+    "weight": 19.5,
+    "base_stats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 50,
+      "spa": 35,
+      "spd": 35,
+      "spe": 35
+    },
+    "abilities": [
+      "guts",
+      "no-guard"
+    ],
+    "hidden_ability": "steadfast",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "machoke": {
+    "id": 67,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Superpower Pokémon",
+    "body_style": "humanoid",
+    "height": 1.5,
+    "weight": 70.5,
+    "base_stats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 70,
+      "spa": 50,
+      "spd": 60,
+      "spe": 45
+    },
+    "abilities": [
+      "guts",
+      "no-guard"
+    ],
+    "hidden_ability": "steadfast",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "machamp": {
+    "id": 68,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Superpower Pokémon",
+    "body_style": "humanoid",
+    "height": 1.6,
+    "weight": 130.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 130,
+      "def": 80,
+      "spa": 65,
+      "spd": 85,
+      "spe": 55
+    },
+    "abilities": [
+      "guts",
+      "no-guard"
+    ],
+    "hidden_ability": "steadfast",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "bellsprout": {
+    "id": 69,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Flower Pokémon",
+    "body_style": "humanoid",
+    "height": 0.7,
+    "weight": 4.0,
+    "base_stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 35,
+      "spa": 70,
+      "spd": 30,
+      "spe": 40
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "gluttony",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "weepinbell": {
+    "id": 70,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Flycatcher Pokémon",
+    "body_style": "blob",
+    "height": 1.0,
+    "weight": 6.4,
+    "base_stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 50,
+      "spa": 85,
+      "spd": 45,
+      "spe": 55
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "gluttony",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "victreebel": {
+    "id": 71,
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Flycatcher Pokémon",
+    "body_style": "blob",
+    "height": 1.7,
+    "weight": 15.5,
+    "base_stats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 100,
+      "spd": 70,
+      "spe": 70
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "gluttony",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "tentacool": {
+    "id": 72,
+    "types": [
+      "water",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Jellyfish Pokémon",
+    "body_style": "tentacles",
+    "height": 0.9,
+    "weight": 45.5,
+    "base_stats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 35,
+      "spa": 50,
+      "spd": 100,
+      "spe": 70
+    },
+    "abilities": [
+      "clear-body",
+      "liquid-ooze"
+    ],
+    "hidden_ability": "rain-dish",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "tentacruel": {
+    "id": 73,
+    "types": [
+      "water",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Jellyfish Pokémon",
+    "body_style": "tentacles",
+    "height": 1.6,
+    "weight": 55.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 65,
+      "spa": 80,
+      "spd": 120,
+      "spe": 100
+    },
+    "abilities": [
+      "clear-body",
+      "liquid-ooze"
+    ],
+    "hidden_ability": "rain-dish",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "geodude": {
+    "id": 74,
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Rock Pokémon",
+    "body_style": "humanoid",
+    "height": 0.4,
+    "weight": 20.0,
+    "base_stats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 100,
+      "spa": 30,
+      "spd": 30,
+      "spe": 20
+    },
+    "abilities": [
+      "rock-head",
+      "sturdy"
+    ],
+    "hidden_ability": "sand-veil",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "graveler": {
+    "id": 75,
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Rock Pokémon",
+    "body_style": "humanoid",
+    "height": 1.0,
+    "weight": 105.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 95,
+      "def": 115,
+      "spa": 45,
+      "spd": 45,
+      "spe": 35
+    },
+    "abilities": [
+      "rock-head",
+      "sturdy"
+    ],
+    "hidden_ability": "sand-veil",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "golem": {
+    "id": 76,
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Megaton Pokémon",
+    "body_style": "humanoid",
+    "height": 1.4,
+    "weight": 300.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 120,
+      "def": 130,
+      "spa": 55,
+      "spd": 65,
+      "spe": 45
+    },
+    "abilities": [
+      "rock-head",
+      "sturdy"
+    ],
+    "hidden_ability": "sand-veil",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "ponyta": {
+    "id": 77,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Fire Horse Pokémon",
+    "body_style": "quadruped",
+    "height": 1.0,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 55,
+      "spa": 65,
+      "spd": 65,
+      "spe": 90
+    },
+    "abilities": [
+      "run-away",
+      "flash-fire"
+    ],
+    "hidden_ability": "flame-body",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "rapidash": {
+    "id": 78,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Fire Horse Pokémon",
+    "body_style": "quadruped",
+    "height": 1.7,
+    "weight": 95.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 100,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 105
+    },
+    "abilities": [
+      "run-away",
+      "flash-fire"
+    ],
+    "hidden_ability": "flame-body",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "slowpoke": {
+    "id": 79,
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Dopey Pokémon",
+    "body_style": "quadruped",
+    "height": 1.2,
+    "weight": 36.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 65,
+      "def": 65,
+      "spa": 40,
+      "spd": 40,
+      "spe": 15
+    },
+    "abilities": [
+      "oblivious",
+      "own-tempo"
+    ],
+    "hidden_ability": "regenerator",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "slowbro": {
+    "id": 80,
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Hermit Crab Pokémon",
+    "body_style": "bipedal",
+    "height": 1.6,
+    "weight": 78.5,
+    "base_stats": {
+      "hp": 95,
+      "atk": 75,
+      "def": 110,
+      "spa": 100,
+      "spd": 80,
+      "spe": 30
+    },
+    "abilities": [
+      "oblivious",
+      "own-tempo"
+    ],
+    "hidden_ability": "regenerator",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "magnemite": {
+    "id": 81,
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "gen": 1,
+    "species": "Magnet Pokémon",
+    "body_style": "humanoid",
+    "height": 0.3,
+    "weight": 6.0,
+    "base_stats": {
+      "hp": 25,
+      "atk": 35,
+      "def": 70,
+      "spa": 95,
+      "spd": 55,
+      "spe": 45
+    },
+    "abilities": [
+      "magnet-pull",
+      "sturdy"
+    ],
+    "hidden_ability": "analytic",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "magneton": {
+    "id": 82,
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "gen": 1,
+    "species": "Magnet Pokémon",
+    "body_style": "multi-head",
+    "height": 1.0,
+    "weight": 60.0,
+    "base_stats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 95,
+      "spa": 120,
+      "spd": 70,
+      "spe": 70
+    },
+    "abilities": [
+      "magnet-pull",
+      "sturdy"
+    ],
+    "hidden_ability": "analytic",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "farfetchd": {
+    "id": 83,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Wild Duck Pokémon",
+    "body_style": "winged",
+    "height": 0.8,
+    "weight": 15.0,
+    "base_stats": {
+      "hp": 52,
+      "atk": 90,
+      "def": 55,
+      "spa": 58,
+      "spd": 62,
+      "spe": 60
+    },
+    "abilities": [
+      "keen-eye",
+      "inner-focus"
+    ],
+    "hidden_ability": "defiant",
+    "egg_groups": [
+      "flying",
+      "ground"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "doduo": {
+    "id": 84,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Twin Bird Pokémon",
+    "body_style": "bipedal",
+    "height": 1.4,
+    "weight": 39.2,
+    "base_stats": {
+      "hp": 35,
+      "atk": 85,
+      "def": 45,
+      "spa": 35,
+      "spd": 35,
+      "spe": 75
+    },
+    "abilities": [
+      "run-away",
+      "early-bird"
+    ],
+    "hidden_ability": "tangled-feet",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "dodrio": {
+    "id": 85,
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Triple Bird Pokémon",
+    "body_style": "bipedal",
+    "height": 1.8,
+    "weight": 85.2,
+    "base_stats": {
+      "hp": 60,
+      "atk": 110,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 110
+    },
+    "abilities": [
+      "run-away",
+      "early-bird"
+    ],
+    "hidden_ability": "tangled-feet",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "seel": {
+    "id": 86,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Sea Lion Pokémon",
+    "body_style": "fish",
+    "height": 1.1,
+    "weight": 90.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 45,
+      "def": 55,
+      "spa": 45,
+      "spd": 70,
+      "spe": 45
+    },
+    "abilities": [
+      "thick-fat",
+      "hydration"
+    ],
+    "hidden_ability": "ice-body",
+    "egg_groups": [
+      "water1",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "dewgong": {
+    "id": 87,
+    "types": [
+      "water",
+      "ice"
+    ],
+    "gen": 1,
+    "species": "Sea Lion Pokémon",
+    "body_style": "fish",
+    "height": 1.7,
+    "weight": 120.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 70,
+      "def": 80,
+      "spa": 70,
+      "spd": 95,
+      "spe": 70
+    },
+    "abilities": [
+      "thick-fat",
+      "hydration"
+    ],
+    "hidden_ability": "ice-body",
+    "egg_groups": [
+      "water1",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "grimer": {
+    "id": 88,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Sludge Pokémon",
+    "body_style": "humanoid",
+    "height": 0.9,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 25
+    },
+    "abilities": [
+      "stench",
+      "sticky-hold"
+    ],
+    "hidden_ability": "poison-touch",
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "muk": {
+    "id": 89,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Sludge Pokémon",
+    "body_style": "humanoid",
+    "height": 1.2,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 105,
+      "atk": 105,
+      "def": 75,
+      "spa": 65,
+      "spd": 100,
+      "spe": 50
+    },
+    "abilities": [
+      "stench",
+      "sticky-hold"
+    ],
+    "hidden_ability": "poison-touch",
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "shellder": {
+    "id": 90,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Bivalve Pokémon",
+    "body_style": "ball",
+    "height": 0.3,
+    "weight": 4.0,
+    "base_stats": {
+      "hp": 30,
+      "atk": 65,
+      "def": 100,
+      "spa": 45,
+      "spd": 25,
+      "spe": 40
+    },
+    "abilities": [
+      "shell-armor",
+      "skill-link"
+    ],
+    "hidden_ability": "overcoat",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "cloyster": {
+    "id": 91,
+    "types": [
+      "water",
+      "ice"
+    ],
+    "gen": 1,
+    "species": "Bivalve Pokémon",
+    "body_style": "ball",
+    "height": 1.5,
+    "weight": 132.5,
+    "base_stats": {
+      "hp": 50,
+      "atk": 95,
+      "def": 180,
+      "spa": 85,
+      "spd": 45,
+      "spe": 70
+    },
+    "abilities": [
+      "shell-armor",
+      "skill-link"
+    ],
+    "hidden_ability": "overcoat",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "gastly": {
+    "id": 92,
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Gas Pokémon",
+    "body_style": "ball",
+    "height": 1.3,
+    "weight": 0.1,
+    "base_stats": {
+      "hp": 30,
+      "atk": 35,
+      "def": 30,
+      "spa": 100,
+      "spd": 35,
+      "spe": 80
+    },
+    "abilities": [
+      "levitate"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "haunter": {
+    "id": 93,
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Gas Pokémon",
+    "body_style": "humanoid",
+    "height": 1.6,
+    "weight": 0.1,
+    "base_stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 45,
+      "spa": 115,
+      "spd": 55,
+      "spe": 95
+    },
+    "abilities": [
+      "levitate"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "gengar": {
+    "id": 94,
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Shadow Pokémon",
+    "body_style": "bipedal",
+    "height": 1.5,
+    "weight": 40.5,
+    "base_stats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 60,
+      "spa": 130,
+      "spd": 75,
+      "spe": 110
+    },
+    "abilities": [
+      "cursed-body"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "onix": {
+    "id": 95,
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Rock Snake Pokémon",
+    "body_style": "serpentine",
+    "height": 8.8,
+    "weight": 210.0,
+    "base_stats": {
+      "hp": 35,
+      "atk": 45,
+      "def": 160,
+      "spa": 30,
+      "spd": 45,
+      "spe": 70
+    },
+    "abilities": [
+      "rock-head",
+      "sturdy"
+    ],
+    "hidden_ability": "weak-armor",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "drowzee": {
+    "id": 96,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Hypnosis Pokémon",
+    "body_style": "humanoid",
+    "height": 1.0,
+    "weight": 32.4,
+    "base_stats": {
+      "hp": 60,
+      "atk": 48,
+      "def": 45,
+      "spa": 43,
+      "spd": 90,
+      "spe": 42
+    },
+    "abilities": [
+      "insomnia",
+      "forewarn"
+    ],
+    "hidden_ability": "inner-focus",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "hypno": {
+    "id": 97,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Hypnosis Pokémon",
+    "body_style": "humanoid",
+    "height": 1.6,
+    "weight": 75.6,
+    "base_stats": {
+      "hp": 85,
+      "atk": 73,
+      "def": 70,
+      "spa": 73,
+      "spd": 115,
+      "spe": 67
+    },
+    "abilities": [
+      "insomnia",
+      "forewarn"
+    ],
+    "hidden_ability": "inner-focus",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "krabby": {
+    "id": 98,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "River Crab Pokémon",
+    "body_style": "armored",
+    "height": 0.4,
+    "weight": 6.5,
+    "base_stats": {
+      "hp": 30,
+      "atk": 105,
+      "def": 90,
+      "spa": 25,
+      "spd": 25,
+      "spe": 50
+    },
+    "abilities": [
+      "hyper-cutter",
+      "shell-armor"
+    ],
+    "hidden_ability": "sheer-force",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "kingler": {
+    "id": 99,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Pincer Pokémon",
+    "body_style": "armored",
+    "height": 1.3,
+    "weight": 60.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 130,
+      "def": 115,
+      "spa": 50,
+      "spd": 50,
+      "spe": 75
+    },
+    "abilities": [
+      "hyper-cutter",
+      "shell-armor"
+    ],
+    "hidden_ability": "sheer-force",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "voltorb": {
+    "id": 100,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Ball Pokémon",
+    "body_style": "ball",
+    "height": 0.5,
+    "weight": 10.4,
+    "base_stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 50,
+      "spa": 55,
+      "spd": 55,
+      "spe": 100
+    },
+    "abilities": [
+      "soundproof",
+      "static"
+    ],
+    "hidden_ability": "aftermath",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "electrode": {
+    "id": 101,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Ball Pokémon",
+    "body_style": "ball",
+    "height": 1.2,
+    "weight": 66.6,
+    "base_stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 150
+    },
+    "abilities": [
+      "soundproof",
+      "static"
+    ],
+    "hidden_ability": "aftermath",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "exeggcute": {
+    "id": 102,
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Egg Pokémon",
+    "body_style": "multi-head",
+    "height": 0.4,
+    "weight": 2.5,
+    "base_stats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 80,
+      "spa": 60,
+      "spd": 45,
+      "spe": 40
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "harvest",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "exeggutor": {
+    "id": 103,
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Coconut Pokémon",
+    "body_style": "bipedal",
+    "height": 2.0,
+    "weight": 120.0,
+    "base_stats": {
+      "hp": 95,
+      "atk": 95,
+      "def": 85,
+      "spa": 125,
+      "spd": 75,
+      "spe": 55
+    },
+    "abilities": [
+      "chlorophyll"
+    ],
+    "hidden_ability": "harvest",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "cubone": {
+    "id": 104,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Lonely Pokémon",
+    "body_style": "bipedal",
+    "height": 0.4,
+    "weight": 6.5,
+    "base_stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 95,
+      "spa": 40,
+      "spd": 50,
+      "spe": 35
+    },
+    "abilities": [
+      "rock-head",
+      "lightning-rod"
+    ],
+    "hidden_ability": "battle-armor",
+    "egg_groups": [
+      "monster"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "marowak": {
+    "id": 105,
+    "types": [
+      "ground"
+    ],
+    "gen": 1,
+    "species": "Bone Keeper Pokémon",
+    "body_style": "bipedal",
+    "height": 1.0,
+    "weight": 45.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 110,
+      "spa": 50,
+      "spd": 80,
+      "spe": 45
+    },
+    "abilities": [
+      "rock-head",
+      "lightning-rod"
+    ],
+    "hidden_ability": "battle-armor",
+    "egg_groups": [
+      "monster"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "hitmonlee": {
+    "id": 106,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Kicking Pokémon",
+    "body_style": "humanoid",
+    "height": 1.5,
+    "weight": 49.8,
+    "base_stats": {
+      "hp": 50,
+      "atk": 120,
+      "def": 53,
+      "spa": 35,
+      "spd": 110,
+      "spe": 87
+    },
+    "abilities": [
+      "limber",
+      "reckless"
+    ],
+    "hidden_ability": "unburden",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "hitmonchan": {
+    "id": 107,
+    "types": [
+      "fighting"
+    ],
+    "gen": 1,
+    "species": "Punching Pokémon",
+    "body_style": "humanoid",
+    "height": 1.4,
+    "weight": 50.2,
+    "base_stats": {
+      "hp": 50,
+      "atk": 105,
+      "def": 79,
+      "spa": 35,
+      "spd": 110,
+      "spe": 76
+    },
+    "abilities": [
+      "keen-eye",
+      "iron-fist"
+    ],
+    "hidden_ability": "inner-focus",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "lickitung": {
+    "id": 108,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Licking Pokémon",
+    "body_style": "bipedal",
+    "height": 1.2,
+    "weight": 65.5,
+    "base_stats": {
+      "hp": 90,
+      "atk": 55,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 30
+    },
+    "abilities": [
+      "own-tempo",
+      "oblivious"
+    ],
+    "hidden_ability": "cloud-nine",
+    "egg_groups": [
+      "monster"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "koffing": {
+    "id": 109,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Gas Pokémon",
+    "body_style": "ball",
+    "height": 0.6,
+    "weight": 1.0,
+    "base_stats": {
+      "hp": 40,
+      "atk": 65,
+      "def": 95,
+      "spa": 60,
+      "spd": 45,
+      "spe": 35
+    },
+    "abilities": [
+      "levitate",
+      "neutralizing-gas"
+    ],
+    "hidden_ability": "stench",
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "weezing": {
+    "id": 110,
+    "types": [
+      "poison"
+    ],
+    "gen": 1,
+    "species": "Poison Gas Pokémon",
+    "body_style": "multi-head",
+    "height": 1.2,
+    "weight": 9.5,
+    "base_stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 120,
+      "spa": 85,
+      "spd": 70,
+      "spe": 60
+    },
+    "abilities": [
+      "levitate",
+      "neutralizing-gas"
+    ],
+    "hidden_ability": "stench",
+    "egg_groups": [
+      "indeterminate"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "rhyhorn": {
+    "id": 111,
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "gen": 1,
+    "species": "Spikes Pokémon",
+    "body_style": "quadruped",
+    "height": 1.0,
+    "weight": 115.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 85,
+      "def": 95,
+      "spa": 30,
+      "spd": 30,
+      "spe": 25
+    },
+    "abilities": [
+      "lightning-rod",
+      "rock-head"
+    ],
+    "hidden_ability": "reckless",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "rhydon": {
+    "id": 112,
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "gen": 1,
+    "species": "Drill Pokémon",
+    "body_style": "bipedal",
+    "height": 1.9,
+    "weight": 120.0,
+    "base_stats": {
+      "hp": 105,
+      "atk": 130,
+      "def": 120,
+      "spa": 45,
+      "spd": 45,
+      "spe": 40
+    },
+    "abilities": [
+      "lightning-rod",
+      "rock-head"
+    ],
+    "hidden_ability": "reckless",
+    "egg_groups": [
+      "monster",
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": true
+    }
+  },
+  "chansey": {
+    "id": 113,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Egg Pokémon",
+    "body_style": "bipedal",
+    "height": 1.1,
+    "weight": 34.6,
+    "base_stats": {
+      "hp": 250,
+      "atk": 5,
+      "def": 5,
+      "spa": 35,
+      "spd": 105,
+      "spe": 50
+    },
+    "abilities": [
+      "natural-cure",
+      "serene-grace"
+    ],
+    "hidden_ability": "healer",
+    "egg_groups": [
+      "fairy"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "tangela": {
+    "id": 114,
+    "types": [
+      "grass"
+    ],
+    "gen": 1,
+    "species": "Vine Pokémon",
+    "body_style": "bipedal",
+    "height": 1.0,
+    "weight": 35.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 55,
+      "def": 115,
+      "spa": 100,
+      "spd": 40,
+      "spe": 60
+    },
+    "abilities": [
+      "chlorophyll",
+      "leaf-guard"
+    ],
+    "hidden_ability": "regenerator",
+    "egg_groups": [
+      "plant"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "kangaskhan": {
+    "id": 115,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Parent Pokémon",
+    "body_style": "bipedal",
+    "height": 2.2,
+    "weight": 80.0,
+    "base_stats": {
+      "hp": 105,
+      "atk": 95,
+      "def": 80,
+      "spa": 40,
+      "spd": 80,
+      "spe": 90
+    },
+    "abilities": [
+      "early-bird",
+      "scrappy"
+    ],
+    "hidden_ability": "inner-focus",
+    "egg_groups": [
+      "monster"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "horsea": {
+    "id": 116,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Dragon Pokémon",
+    "body_style": "blob",
+    "height": 0.4,
+    "weight": 8.0,
+    "base_stats": {
+      "hp": 30,
+      "atk": 40,
+      "def": 70,
+      "spa": 70,
+      "spd": 25,
+      "spe": 60
+    },
+    "abilities": [
+      "swift-swim",
+      "sniper"
+    ],
+    "hidden_ability": "damp",
+    "egg_groups": [
+      "water1",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "seadra": {
+    "id": 117,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Dragon Pokémon",
+    "body_style": "blob",
+    "height": 1.2,
+    "weight": 25.0,
+    "base_stats": {
+      "hp": 55,
+      "atk": 65,
+      "def": 95,
+      "spa": 95,
+      "spd": 45,
+      "spe": 85
+    },
+    "abilities": [
+      "poison-point",
+      "sniper"
+    ],
+    "hidden_ability": "damp",
+    "egg_groups": [
+      "water1",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "goldeen": {
+    "id": 118,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Goldfish Pokémon",
+    "body_style": "fish",
+    "height": 0.6,
+    "weight": 15.0,
+    "base_stats": {
+      "hp": 45,
+      "atk": 67,
+      "def": 60,
+      "spa": 35,
+      "spd": 50,
+      "spe": 63
+    },
+    "abilities": [
+      "swift-swim",
+      "water-veil"
+    ],
+    "hidden_ability": "lightning-rod",
+    "egg_groups": [
+      "water2"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "seaking": {
+    "id": 119,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Goldfish Pokémon",
+    "body_style": "fish",
+    "height": 1.3,
+    "weight": 39.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 92,
+      "def": 65,
+      "spa": 65,
+      "spd": 80,
+      "spe": 68
+    },
+    "abilities": [
+      "swift-swim",
+      "water-veil"
+    ],
+    "hidden_ability": "lightning-rod",
+    "egg_groups": [
+      "water2"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "staryu": {
+    "id": 120,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Star Shape Pokémon",
+    "body_style": "blob",
+    "height": 0.8,
+    "weight": 34.5,
+    "base_stats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 55,
+      "spa": 70,
+      "spd": 55,
+      "spe": 85
+    },
+    "abilities": [
+      "illuminate",
+      "natural-cure"
+    ],
+    "hidden_ability": "analytic",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "starmie": {
+    "id": 121,
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Mysterious Pokémon",
+    "body_style": "blob",
+    "height": 1.1,
+    "weight": 80.0,
+    "base_stats": {
+      "hp": 60,
+      "atk": 75,
+      "def": 85,
+      "spa": 100,
+      "spd": 85,
+      "spe": 115
+    },
+    "abilities": [
+      "illuminate",
+      "natural-cure"
+    ],
+    "hidden_ability": "analytic",
+    "egg_groups": [
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "mr-mime": {
+    "id": 122,
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "gen": 1,
+    "species": "Barrier Pokémon",
+    "body_style": "humanoid",
+    "height": 1.3,
+    "weight": 54.5,
+    "base_stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 65,
+      "spa": 100,
+      "spd": 120,
+      "spe": 90
+    },
+    "abilities": [
+      "soundproof",
+      "filter"
+    ],
+    "hidden_ability": "technician",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "scyther": {
+    "id": 123,
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Mantis Pokémon",
+    "body_style": "winged",
+    "height": 1.5,
+    "weight": 56.0,
+    "base_stats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 80,
+      "spa": 55,
+      "spd": 80,
+      "spe": 105
+    },
+    "abilities": [
+      "swarm",
+      "technician"
+    ],
+    "hidden_ability": "steadfast",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "jynx": {
+    "id": 124,
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Human Shape Pokémon",
+    "body_style": "humanoid",
+    "height": 1.4,
+    "weight": 40.6,
+    "base_stats": {
+      "hp": 65,
+      "atk": 50,
+      "def": 35,
+      "spa": 115,
+      "spd": 95,
+      "spe": 95
+    },
+    "abilities": [
+      "oblivious",
+      "forewarn"
+    ],
+    "hidden_ability": "dry-skin",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "electabuzz": {
+    "id": 125,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Electric Pokémon",
+    "body_style": "bipedal",
+    "height": 1.1,
+    "weight": 30.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 83,
+      "def": 57,
+      "spa": 95,
+      "spd": 85,
+      "spe": 105
+    },
+    "abilities": [
+      "static"
+    ],
+    "hidden_ability": "vital-spirit",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "magmar": {
+    "id": 126,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Spitfire Pokémon",
+    "body_style": "bipedal",
+    "height": 1.3,
+    "weight": 44.5,
+    "base_stats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 57,
+      "spa": 100,
+      "spd": 85,
+      "spe": 93
+    },
+    "abilities": [
+      "flame-body"
+    ],
+    "hidden_ability": "vital-spirit",
+    "egg_groups": [
+      "humanshape"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "pinsir": {
+    "id": 127,
+    "types": [
+      "bug"
+    ],
+    "gen": 1,
+    "species": "Stag Beetle Pokémon",
+    "body_style": "humanoid",
+    "height": 1.5,
+    "weight": 55.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 125,
+      "def": 100,
+      "spa": 55,
+      "spd": 70,
+      "spe": 85
+    },
+    "abilities": [
+      "hyper-cutter",
+      "mold-breaker"
+    ],
+    "hidden_ability": "moxie",
+    "egg_groups": [
+      "bug"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "tauros": {
+    "id": 128,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Wild Bull Pokémon",
+    "body_style": "quadruped",
+    "height": 1.4,
+    "weight": 88.4,
+    "base_stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 95,
+      "spa": 40,
+      "spd": 70,
+      "spe": 110
+    },
+    "abilities": [
+      "intimidate",
+      "anger-point"
+    ],
+    "hidden_ability": "sheer-force",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "magikarp": {
+    "id": 129,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Fish Pokémon",
+    "body_style": "fish",
+    "height": 0.9,
+    "weight": 10.0,
+    "base_stats": {
+      "hp": 20,
+      "atk": 10,
+      "def": 55,
+      "spa": 15,
+      "spd": 20,
+      "spe": 80
+    },
+    "abilities": [
+      "swift-swim"
+    ],
+    "hidden_ability": "rattled",
+    "egg_groups": [
+      "water2",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "gyarados": {
+    "id": 130,
+    "types": [
+      "water",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Atrocious Pokémon",
+    "body_style": "serpentine",
+    "height": 6.5,
+    "weight": 235.0,
+    "base_stats": {
+      "hp": 95,
+      "atk": 125,
+      "def": 79,
+      "spa": 60,
+      "spd": 100,
+      "spe": 81
+    },
+    "abilities": [
+      "intimidate"
+    ],
+    "hidden_ability": "moxie",
+    "egg_groups": [
+      "water2",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "lapras": {
+    "id": 131,
+    "types": [
+      "water",
+      "ice"
+    ],
+    "gen": 1,
+    "species": "Transport Pokémon",
+    "body_style": "fish",
+    "height": 2.5,
+    "weight": 220.0,
+    "base_stats": {
+      "hp": 130,
+      "atk": 85,
+      "def": 80,
+      "spa": 85,
+      "spd": 95,
+      "spe": 60
+    },
+    "abilities": [
+      "water-absorb",
+      "shell-armor"
+    ],
+    "hidden_ability": "hydration",
+    "egg_groups": [
+      "monster",
+      "water1"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "ditto": {
+    "id": 132,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Transform Pokémon",
+    "body_style": "ball",
+    "height": 0.3,
+    "weight": 4.0,
+    "base_stats": {
+      "hp": 48,
+      "atk": 48,
+      "def": 48,
+      "spa": 48,
+      "spd": 48,
+      "spe": 48
+    },
+    "abilities": [
+      "limber"
+    ],
+    "hidden_ability": "imposter",
+    "egg_groups": [
+      "ditto"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "eevee": {
+    "id": 133,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Evolution Pokémon",
+    "body_style": "quadruped",
+    "height": 0.3,
+    "weight": 6.5,
+    "base_stats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 50,
+      "spa": 45,
+      "spd": 65,
+      "spe": 55
+    },
+    "abilities": [
+      "run-away",
+      "adaptability"
+    ],
+    "hidden_ability": "anticipation",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "vaporeon": {
+    "id": 134,
+    "types": [
+      "water"
+    ],
+    "gen": 1,
+    "species": "Bubble Jet Pokémon",
+    "body_style": "quadruped",
+    "height": 1.0,
+    "weight": 29.0,
+    "base_stats": {
+      "hp": 130,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 65
+    },
+    "abilities": [
+      "water-absorb"
+    ],
+    "hidden_ability": "hydration",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "jolteon": {
+    "id": 135,
+    "types": [
+      "electric"
+    ],
+    "gen": 1,
+    "species": "Lightning Pokémon",
+    "body_style": "quadruped",
+    "height": 0.8,
+    "weight": 24.5,
+    "base_stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 130
+    },
+    "abilities": [
+      "volt-absorb"
+    ],
+    "hidden_ability": "quick-feet",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "flareon": {
+    "id": 136,
+    "types": [
+      "fire"
+    ],
+    "gen": 1,
+    "species": "Flame Pokémon",
+    "body_style": "quadruped",
+    "height": 0.9,
+    "weight": 25.0,
+    "base_stats": {
+      "hp": 65,
+      "atk": 130,
+      "def": 60,
+      "spa": 95,
+      "spd": 110,
+      "spe": 65
+    },
+    "abilities": [
+      "flash-fire"
+    ],
+    "hidden_ability": "guts",
+    "egg_groups": [
+      "ground"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "porygon": {
+    "id": 137,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Virtual Pokémon",
+    "body_style": "bipedal",
+    "height": 0.8,
+    "weight": 36.5,
+    "base_stats": {
+      "hp": 65,
+      "atk": 60,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "abilities": [
+      "trace",
+      "download"
+    ],
+    "hidden_ability": "analytic",
+    "egg_groups": [
+      "mineral"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "omanyte": {
+    "id": 138,
+    "types": [
+      "rock",
+      "water"
+    ],
+    "gen": 1,
+    "species": "Spiral Pokémon",
+    "body_style": "tentacles",
+    "height": 0.4,
+    "weight": 7.5,
+    "base_stats": {
+      "hp": 35,
+      "atk": 40,
+      "def": 100,
+      "spa": 90,
+      "spd": 55,
+      "spe": 35
+    },
+    "abilities": [
+      "swift-swim",
+      "shell-armor"
+    ],
+    "hidden_ability": "weak-armor",
+    "egg_groups": [
+      "water1",
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "omastar": {
+    "id": 139,
+    "types": [
+      "rock",
+      "water"
+    ],
+    "gen": 1,
+    "species": "Spiral Pokémon",
+    "body_style": "tentacles",
+    "height": 1.0,
+    "weight": 35.0,
+    "base_stats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 125,
+      "spa": 115,
+      "spd": 70,
+      "spe": 55
+    },
+    "abilities": [
+      "swift-swim",
+      "shell-armor"
+    ],
+    "hidden_ability": "weak-armor",
+    "egg_groups": [
+      "water1",
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "kabuto": {
+    "id": 140,
+    "types": [
+      "rock",
+      "water"
+    ],
+    "gen": 1,
+    "species": "Shellfish Pokémon",
+    "body_style": "armored",
+    "height": 0.5,
+    "weight": 11.5,
+    "base_stats": {
+      "hp": 30,
+      "atk": 80,
+      "def": 90,
+      "spa": 55,
+      "spd": 45,
+      "spe": 55
+    },
+    "abilities": [
+      "swift-swim",
+      "battle-armor"
+    ],
+    "hidden_ability": "weak-armor",
+    "egg_groups": [
+      "water1",
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "kabutops": {
+    "id": 141,
+    "types": [
+      "rock",
+      "water"
+    ],
+    "gen": 1,
+    "species": "Shellfish Pokémon",
+    "body_style": "bipedal",
+    "height": 1.3,
+    "weight": 40.5,
+    "base_stats": {
+      "hp": 60,
+      "atk": 115,
+      "def": 105,
+      "spa": 65,
+      "spd": 70,
+      "spe": 80
+    },
+    "abilities": [
+      "swift-swim",
+      "battle-armor"
+    ],
+    "hidden_ability": "weak-armor",
+    "egg_groups": [
+      "water1",
+      "water3"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": true,
+      "can_dig": false
+    }
+  },
+  "aerodactyl": {
+    "id": 142,
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Fossil Pokémon",
+    "body_style": "winged",
+    "height": 1.8,
+    "weight": 59.0,
+    "base_stats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 60,
+      "spd": 75,
+      "spe": 130
+    },
+    "abilities": [
+      "rock-head",
+      "pressure"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "flying"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "snorlax": {
+    "id": 143,
+    "types": [
+      "normal"
+    ],
+    "gen": 1,
+    "species": "Sleeping Pokémon",
+    "body_style": "humanoid",
+    "height": 2.1,
+    "weight": 460.0,
+    "base_stats": {
+      "hp": 160,
+      "atk": 110,
+      "def": 65,
+      "spa": 65,
+      "spd": 110,
+      "spe": 30
+    },
+    "abilities": [
+      "immunity",
+      "thick-fat"
+    ],
+    "hidden_ability": "gluttony",
+    "egg_groups": [
+      "monster"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "articuno": {
+    "id": 144,
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Freeze Pokémon",
+    "body_style": "winged",
+    "height": 1.7,
+    "weight": 55.4,
+    "base_stats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 100,
+      "spa": 95,
+      "spd": 125,
+      "spe": 85
+    },
+    "abilities": [
+      "pressure"
+    ],
+    "hidden_ability": "snow-cloak",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "zapdos": {
+    "id": 145,
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Electric Pokémon",
+    "body_style": "winged",
+    "height": 1.6,
+    "weight": 52.6,
+    "base_stats": {
+      "hp": 90,
+      "atk": 90,
+      "def": 85,
+      "spa": 125,
+      "spd": 90,
+      "spe": 100
+    },
+    "abilities": [
+      "pressure"
+    ],
+    "hidden_ability": "static",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "moltres": {
+    "id": 146,
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Flame Pokémon",
+    "body_style": "winged",
+    "height": 2.0,
+    "weight": 60.0,
+    "base_stats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 90,
+      "spa": 125,
+      "spd": 85,
+      "spe": 90
+    },
+    "abilities": [
+      "pressure"
+    ],
+    "hidden_ability": "flame-body",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "dratini": {
+    "id": 147,
+    "types": [
+      "dragon"
+    ],
+    "gen": 1,
+    "species": "Dragon Pokémon",
+    "body_style": "serpentine",
+    "height": 1.8,
+    "weight": 3.3,
+    "base_stats": {
+      "hp": 41,
+      "atk": 64,
+      "def": 45,
+      "spa": 50,
+      "spd": 50,
+      "spe": 50
+    },
+    "abilities": [
+      "shed-skin"
+    ],
+    "hidden_ability": "marvel-scale",
+    "egg_groups": [
+      "water1",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "dragonair": {
+    "id": 148,
+    "types": [
+      "dragon"
+    ],
+    "gen": 1,
+    "species": "Dragon Pokémon",
+    "body_style": "serpentine",
+    "height": 4.0,
+    "weight": 16.5,
+    "base_stats": {
+      "hp": 61,
+      "atk": 84,
+      "def": 65,
+      "spa": 70,
+      "spd": 70,
+      "spe": 70
+    },
+    "abilities": [
+      "shed-skin"
+    ],
+    "hidden_ability": "marvel-scale",
+    "egg_groups": [
+      "water1",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "dragonite": {
+    "id": 149,
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "gen": 1,
+    "species": "Dragon Pokémon",
+    "body_style": "bipedal",
+    "height": 2.2,
+    "weight": 210.0,
+    "base_stats": {
+      "hp": 91,
+      "atk": 134,
+      "def": 95,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "abilities": [
+      "inner-focus"
+    ],
+    "hidden_ability": "multiscale",
+    "egg_groups": [
+      "water1",
+      "dragon"
+    ],
+    "movement": {
+      "grounded": false,
+      "can_fly": true,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "mewtwo": {
+    "id": 150,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "Genetic Pokémon",
+    "body_style": "bipedal",
+    "height": 2.0,
+    "weight": 122.0,
+    "base_stats": {
+      "hp": 106,
+      "atk": 110,
+      "def": 90,
+      "spa": 154,
+      "spd": 90,
+      "spe": 130
+    },
+    "abilities": [
+      "pressure"
+    ],
+    "hidden_ability": "unnerve",
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  },
+  "mew": {
+    "id": 151,
+    "types": [
+      "psychic"
+    ],
+    "gen": 1,
+    "species": "New Species Pokémon",
+    "body_style": "bipedal",
+    "height": 0.4,
+    "weight": 4.0,
+    "base_stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "abilities": [
+      "synchronize"
+    ],
+    "hidden_ability": null,
+    "egg_groups": [
+      "no-eggs"
+    ],
+    "movement": {
+      "grounded": true,
+      "can_fly": false,
+      "can_swim": false,
+      "can_dig": false
+    }
+  }
+}

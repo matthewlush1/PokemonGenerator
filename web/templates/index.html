@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Sprite Generator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Decorative Background Elements -->
     <div class="bg-glow bg-glow-1"></div>
@@ -57,6 +61,14 @@
                 <span class="tab-icon">📋</span>
                 <span class="tab-label">Spritesheet</span>
             </button>
+            <button class="tab" data-mode="stat-shiny">
+                <span class="tab-icon">📊</span>
+                <span class="tab-label">Stat Shiny</span>
+            </button>
+            <button class="tab" data-mode="smart-swap">
+                <span class="tab-icon">🧬</span>
+                <span class="tab-label">Smart Swap</span>
+            </button>
         </nav>
 
         <!-- ═══ Gallery Panel ═══ -->
@@ -81,6 +93,23 @@
                     <button class="btn btn-primary" onclick="downloadMore()">Download Gen 1 Sprites</button>
                 </div>
                 {% endif %}
+            </div>
+            <!-- Pokédex Info Panel (shows on sprite click) -->
+            <div class="pokedex-panel" id="pokedex-panel" style="display:none">
+                <div class="pokedex-card">
+                    <div class="pokedex-header">
+                        <img class="pokedex-sprite" id="pokedex-sprite" src="" alt="">
+                        <div class="pokedex-title">
+                            <h3 id="pokedex-name"></h3>
+                            <p class="pokedex-species" id="pokedex-species"></p>
+                            <div class="pokedex-types" id="pokedex-types"></div>
+                        </div>
+                    </div>
+                    <div class="pokedex-stats" id="pokedex-stats"></div>
+                    <div class="pokedex-info">
+                        <div class="pokedex-meta" id="pokedex-meta"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -140,7 +169,8 @@
                         <label>Target Colors</label>
                         <select id="palette-target" class="select">
                             {% for name in sprites %}
-                            <option value="{{ name }}" {% if loop.last %}selected{% endif %}>{{ name|capitalize }}</option>
+                            <option value="{{ name }}" {% if loop.last %}selected{% endif %}>{{ name|capitalize }}
+                            </option>
                             {% endfor %}
                         </select>
                     </div>
@@ -205,6 +235,62 @@
             </div>
             <div class="results-area" id="sheet-results"></div>
         </section>
+
+        <!-- ═══ Stat Shiny Panel ═══ -->
+        <section class="panel" id="panel-stat-shiny">
+            <div class="panel-header">
+                <h2>📊 Stat-Influenced Shiny</h2>
+                <p class="panel-desc">Generate shinies where the color is driven by a Pokémon's dominant stat. High
+                    Attack → red, high Sp.Atk → blue, high Speed → gold.</p>
+            </div>
+            <div class="gen-controls">
+                <div class="control-group">
+                    <label>Source Pokémon</label>
+                    <select id="stat-shiny-source" class="select">
+                        {% for name in sprites %}
+                        <option value="{{ name }}">{{ name|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-stat-shiny">
+                    <span class="btn-icon">📊</span> Generate Stat Shiny
+                </button>
+            </div>
+            <div class="results-area swap-results" id="stat-shiny-results"></div>
+        </section>
+
+        <!-- ═══ Smart Swap Panel ═══ -->
+        <section class="panel" id="panel-smart-swap">
+            <div class="panel-header">
+                <h2>🧬 Smart Swap</h2>
+                <p class="panel-desc">Body-style-aware palette swap. Only suggests Pokémon with matching shapes for
+                    better visual results.</p>
+            </div>
+            <div class="gen-controls swap-controls">
+                <div class="swap-selector">
+                    <div class="control-group">
+                        <label>Source Shape</label>
+                        <select id="smart-source" class="select" onchange="loadBodyMatches()">
+                            {% for name in sprites %}
+                            <option value="{{ name }}">{{ name|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                        <span class="body-style-badge" id="smart-body-style"></span>
+                    </div>
+                    <div class="swap-arrow">→</div>
+                    <div class="control-group">
+                        <label>Target Colors <small>(matching body style)</small></label>
+                        <select id="smart-target" class="select">
+                            <option value="">Select source first...</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-smart">
+                    <span class="btn-icon">🧬</span> Smart Swap
+                </button>
+            </div>
+            <div class="results-area swap-results" id="smart-swap-results"></div>
+        </section>
     </main>
 
     <!-- Loading Overlay -->
@@ -220,4 +306,5 @@
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
+
 </html>

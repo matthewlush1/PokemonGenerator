@@ -32,9 +32,13 @@ from pokemon_sprite_generator import (
     PaletteSwapper,
     SpriteCompositor,
     SpritesheetBuilder,
+    StatInfluencer,
+    BodyStyleMatcher,
     generate_palette_swap,
     generate_shiny_variant,
     generate_type_swap,
+    generate_stat_shiny,
+    generate_smart_swap,
     build_spritesheet,
 )
 
@@ -45,6 +49,18 @@ SPRITES_DIR = PROJECT_ROOT / "Reference" / "pokemondb" / "black-white"
 OUTPUT_DIR = PROJECT_ROOT / "output"
 PALETTE_DB = PROJECT_ROOT / "Reference" / "palettes" / "palette_db.json"
 TYPES_DB = PROJECT_ROOT / "data" / "pokemon_types.json"
+POKEMON_DATA_FILE = PROJECT_ROOT / "data" / "pokemon_data.json"
+
+
+def load_pokemon_data():
+    """Load the rich pokemon data (V2) or fall back to types-only (V1)."""
+    if POKEMON_DATA_FILE.exists():
+        with open(POKEMON_DATA_FILE) as f:
+            return json.load(f)
+    if TYPES_DB.exists():
+        with open(TYPES_DB) as f:
+            return json.load(f)
+    return {}
 
 # Hand-crafted fallback palettes for every type (dark → mid → light ramps)
 # Used when the palette DB doesn't yet have data for a given type.
@@ -330,6 +346,97 @@ def api_download_more():
     # Run palette analyzer on new sprites
     from palette_analyzer import analyze_sprite, build_type_palettes
     return jsonify({"message": f"Downloaded {len(new_names)} sprites!", "downloaded": len(new_names), "names": new_names})
+
+
+# ─── V2 Characteristic-Aware Endpoints ────────────────────────────────────────
+
+
+@app.route("/api/pokemon/<name>")
+def api_pokemon_info(name):
+    """Get full Pokédex data for a Pokémon."""
+    db = load_pokemon_data()
+    data = db.get(name)
+    if not data:
+        return jsonify({"error": f"Unknown Pokémon: {name}"}), 404
+
+    # Add sprite image
+    img = load_sprite_image(name)
+    result = dict(data)
+    result["name"] = name
+    if img:
+        result["image"] = sprite_to_base64(img)
+    return jsonify(result)
+
+
+@app.route("/api/pokemon/<name>/matches")
+def api_body_style_matches(name):
+    """Get compatible body-style matches for smart swap."""
+    db = load_pokemon_data()
+    matches = BodyStyleMatcher.find_matches(name, db)
+    # Filter to only sprites we actually have downloaded
+    available = set(get_available_sprites())
+    matches = [m for m in matches if m in available]
+    return jsonify({"source": name, "body_style": db.get(name, {}).get("body_style", "unknown"), "matches": matches})
+
+
+@app.route("/api/generate/stat-shiny", methods=["POST"])
+def api_generate_stat_shiny():
+    """Generate a stat-influenced shiny variant."""
+    data = request.json or {}
+    source_name = data.get("source", "")
+
+    source_img = load_sprite_image(source_name)
+    if not source_img:
+        return jsonify({"error": f"Source '{source_name}' not found"}), 404
+
+    db = load_pokemon_data()
+    poke_data = db.get(source_name, {})
+    stats = poke_data.get("base_stats", {"hp": 50, "atk": 50, "def": 50, "spa": 50, "spd": 50, "spe": 50})
+
+    hue_shift = StatInfluencer.get_hue_shift(stats)
+    sat_shift = StatInfluencer.get_saturation(stats)
+    dominant = StatInfluencer.get_dominant_stat(stats)
+
+    result = SpriteCompositor.apply_hue_shift(source_img, hue_shift)
+    result = SpriteCompositor.apply_saturation_shift(result, sat_shift)
+
+    return jsonify({
+        "source": {"name": source_name, "image": sprite_to_base64(source_img)},
+        "result": {"image": sprite_to_base64(result), "label": f"{source_name} (stat shiny)"},
+        "stats": stats,
+        "dominant_stat": dominant,
+        "hue_shift": round(hue_shift, 1),
+        "saturation": round(sat_shift, 2),
+    })
+
+
+@app.route("/api/generate/smart-swap", methods=["POST"])
+def api_generate_smart_swap():
+    """Body-style-aware palette swap between two Pokémon."""
+    data = request.json or {}
+    source_name = data.get("source", "")
+    target_name = data.get("target", "")
+
+    source_img = load_sprite_image(source_name)
+    target_img = load_sprite_image(target_name)
+    if not source_img:
+        return jsonify({"error": f"Source '{source_name}' not found"}), 404
+    if not target_img:
+        return jsonify({"error": f"Target '{target_name}' not found"}), 404
+
+    target_path = SPRITES_DIR / "normal" / f"{target_name}.png"
+    source_path = SPRITES_DIR / "normal" / f"{source_name}.png"
+
+    source_palette = PokemonPalette(source_path)
+    target_palette = PokemonPalette(target_path)
+    swapper = PaletteSwapper(source_palette, target_palette)
+    result = swapper.apply_to_image(source_img)
+
+    return jsonify({
+        "source": {"name": source_name, "image": sprite_to_base64(source_img)},
+        "target": {"name": target_name, "image": sprite_to_base64(target_img)},
+        "result": {"image": sprite_to_base64(result), "label": f"{source_name} × {target_name}"},
+    })
 
 
 if __name__ == "__main__":

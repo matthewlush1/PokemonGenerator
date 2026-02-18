@@ -375,3 +375,118 @@ def build_spritesheet(
 
     builder.save(output_path)
     return builder.build()
+
+
+# ─── Characteristic-Aware Classes ─────────────────────────────────────────────
+
+
+class StatInfluencer:
+    """Maps Pokémon base stats to visual properties for stat-influenced generation."""
+
+    # Which hue each stat maps to (in degrees 0–360)
+    STAT_HUE_MAP = {
+        "atk": 0,      # Red
+        "spa": 240,     # Blue
+        "spe": 50,      # Yellow-gold
+        "def": 120,     # Green
+        "spd": 280,     # Purple
+        "hp":  30,      # Orange
+    }
+
+    @staticmethod
+    def get_dominant_stat(stats: dict) -> str:
+        """Return the key of the highest base stat."""
+        return max(stats, key=stats.get)
+
+    @classmethod
+    def get_hue_shift(cls, stats: dict) -> float:
+        """Derive a hue shift from the Pokémon's dominant stat."""
+        dominant = cls.get_dominant_stat(stats)
+        return cls.STAT_HUE_MAP.get(dominant, 0)
+
+    @staticmethod
+    def get_saturation(stats: dict) -> float:
+        """Derive saturation from the total stat spread.
+        Higher total = more saturated (1.0–1.5 range)."""
+        total = sum(stats.values())
+        # Gen 1 stats range from ~180 (Magikarp) to ~680 (Mewtwo)
+        normalized = min(max((total - 180) / 500, 0), 1)
+        return 0.8 + normalized * 0.7  # Range: 0.8 to 1.5
+
+
+class BodyStyleMatcher:
+    """Finds Pokémon with compatible body styles for smart palette swaps."""
+
+    # Groups of body styles that look reasonable swapped
+    COMPATIBLE_GROUPS = {
+        "quadruped":  ["quadruped"],
+        "bipedal":    ["bipedal", "humanoid"],
+        "humanoid":   ["humanoid", "bipedal"],
+        "serpentine":  ["serpentine"],
+        "winged":     ["winged"],
+        "fish":       ["fish"],
+        "blob":       ["blob", "ball"],
+        "ball":       ["ball", "blob"],
+        "tentacles":  ["tentacles"],
+        "multi-head": ["multi-head"],
+        "armored":    ["armored", "quadruped"],
+    }
+
+    @classmethod
+    def find_matches(cls, source_name: str, pokemon_db: dict) -> list:
+        """Find all Pokémon with compatible body styles."""
+        source_data = pokemon_db.get(source_name)
+        if not source_data:
+            return []
+
+        source_style = source_data.get("body_style", "unknown")
+        compatible = cls.COMPATIBLE_GROUPS.get(source_style, [source_style])
+
+        matches = []
+        for name, data in pokemon_db.items():
+            if name == source_name:
+                continue
+            if data.get("body_style") in compatible:
+                matches.append(name)
+
+        return sorted(matches)
+
+    @classmethod
+    def get_random_match(cls, source_name: str, pokemon_db: dict) -> str:
+        """Pick a random compatible Pokémon for fusion."""
+        matches = cls.find_matches(source_name, pokemon_db)
+        return random.choice(matches) if matches else None
+
+
+# ─── Characteristic-Aware Generation ─────────────────────────────────────────
+
+
+def generate_stat_shiny(
+    source_path: Path,
+    stats: dict,
+    output_path: Path,
+) -> Image.Image:
+    """Generate a 'shiny' variant influenced by the Pokémon's stats.
+    Dominant stat determines hue, total stats determine saturation."""
+    source_img = Image.open(source_path).convert("RGBA")
+
+    hue_shift = StatInfluencer.get_hue_shift(stats)
+    sat_shift = StatInfluencer.get_saturation(stats)
+
+    result = SpriteCompositor.apply_hue_shift(source_img, hue_shift)
+    result = SpriteCompositor.apply_saturation_shift(result, sat_shift)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    result.save(str(output_path))
+    return result
+
+
+def generate_smart_swap(
+    source_path: Path,
+    target_path: Path,
+    output_path: Path,
+) -> Image.Image:
+    """Swap palettes between two sprites (intended for body-style-matched pairs)."""
+    target_palette = PokemonPalette(target_path)
+    return generate_palette_swap(source_path, target_palette, output_path)
+

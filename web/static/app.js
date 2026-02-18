@@ -265,6 +265,219 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make downloadMore available globally for the empty-state button
     window.downloadMore = downloadMore;
 
+    // ─── Gallery Pokédex Info ──────────────────────────────────────────
+    document.querySelectorAll('.sprite-card').forEach(card => {
+        card.addEventListener('click', async () => {
+            const name = card.dataset.name;
+            try {
+                const resp = await fetch(`/api/pokemon/${name}`);
+                const data = await resp.json();
+                if (data.error) return;
+
+                // Show Pokédex panel
+                const panel = document.getElementById('pokedex-panel');
+                panel.style.display = 'block';
+
+                // Sprite image
+                const spriteImg = document.getElementById('pokedex-sprite');
+                if (data.image) spriteImg.src = data.image;
+
+                // Name & species
+                document.getElementById('pokedex-name').textContent =
+                    `#${data.id} ${capitalize(data.name)}`;
+                document.getElementById('pokedex-species').textContent =
+                    data.species || '';
+
+                // Type badges
+                const typesEl = document.getElementById('pokedex-types');
+                typesEl.innerHTML = (data.types || []).map(t =>
+                    `<span class="pokedex-type-badge" style="background: var(--type-${t})">${t}</span>`
+                ).join('');
+
+                // Stat bars
+                const statsEl = document.getElementById('pokedex-stats');
+                const stats = data.base_stats || {};
+                const maxStat = 255;
+                statsEl.innerHTML = Object.entries(stats).map(([k, v]) =>
+                    `<div class="stat-row">
+                        <span class="stat-name">${k}</span>
+                        <div class="stat-bar-wrap">
+                            <div class="stat-bar ${k}" style="width: ${(v / maxStat) * 100}%"></div>
+                        </div>
+                        <span class="stat-val">${v}</span>
+                    </div>`
+                ).join('');
+
+                // Meta info
+                const metaEl = document.getElementById('pokedex-meta');
+                metaEl.innerHTML = `
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Body Style</span>
+                        <span class="pokedex-meta-value">${data.body_style || '—'}</span>
+                    </div>
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Height</span>
+                        <span class="pokedex-meta-value">${data.height}m</span>
+                    </div>
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Weight</span>
+                        <span class="pokedex-meta-value">${data.weight}kg</span>
+                    </div>
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Abilities</span>
+                        <span class="pokedex-meta-value">${(data.abilities || []).join(', ')}</span>
+                    </div>
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Egg Groups</span>
+                        <span class="pokedex-meta-value">${(data.egg_groups || []).join(', ')}</span>
+                    </div>
+                    <div class="pokedex-meta-item">
+                        <span class="pokedex-meta-label">Generation</span>
+                        <span class="pokedex-meta-value">Gen ${data.gen}</span>
+                    </div>
+                `;
+
+                // Smooth scroll to panel
+                panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } catch (err) {
+                console.error('Pokédex fetch:', err);
+            }
+        });
+    });
+
+    // ─── Stat Shiny Generation ─────────────────────────────────────────
+    document.getElementById('btn-gen-stat-shiny')?.addEventListener('click', async () => {
+        const source = document.getElementById('stat-shiny-source').value;
+        showLoading('Generating stat-influenced shiny...');
+
+        try {
+            const resp = await fetch('/api/generate/stat-shiny', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ source }),
+            });
+            const data = await resp.json();
+            if (data.error) throw new Error(data.error);
+
+            const container = document.getElementById('stat-shiny-results');
+            container.innerHTML = `
+                <div class="stat-info-card">
+                    <div>
+                        <div class="stat-info-label">Dominant Stat</div>
+                        <div class="stat-info-value">${data.dominant_stat}</div>
+                    </div>
+                    <div>
+                        <div class="stat-info-label">Hue Shift</div>
+                        <div class="stat-info-value">${data.hue_shift}°</div>
+                    </div>
+                    <div>
+                        <div class="stat-info-label">Saturation</div>
+                        <div class="stat-info-value">${data.saturation}×</div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <img src="${data.source.image}" alt="${data.source.name}">
+                    <div class="result-label">${capitalize(data.source.name)}</div>
+                    <div class="result-meta">Original</div>
+                </div>
+                <div class="swap-result-arrow">→</div>
+                <div class="result-card" style="border-color: var(--accent-2);">
+                    <img src="${data.result.image}" alt="Stat Shiny">
+                    <div class="result-label">✨ Stat Shiny</div>
+                    <div class="result-meta">${data.result.label}</div>
+                </div>
+            `;
+
+            showToast(`📊 Stat shiny generated! (${data.dominant_stat}-dominant)`, 'success');
+        } catch (err) {
+            showToast(`Error: ${err.message}`, 'error');
+        }
+        hideLoading();
+    });
+
+    // ─── Smart Swap — Body Style Matcher ───────────────────────────────
+    window.loadBodyMatches = async function () {
+        const source = document.getElementById('smart-source').value;
+        const targetSelect = document.getElementById('smart-target');
+        const badge = document.getElementById('smart-body-style');
+
+        try {
+            const resp = await fetch(`/api/pokemon/${source}/matches`);
+            const data = await resp.json();
+
+            badge.textContent = data.body_style || '';
+
+            targetSelect.innerHTML = '';
+            if (data.matches && data.matches.length > 0) {
+                data.matches.forEach(name => {
+                    const opt = document.createElement('option');
+                    opt.value = name;
+                    opt.textContent = capitalize(name);
+                    targetSelect.appendChild(opt);
+                });
+            } else {
+                const opt = document.createElement('option');
+                opt.value = '';
+                opt.textContent = 'No matching body styles found';
+                targetSelect.appendChild(opt);
+            }
+        } catch (err) {
+            console.error('Body matches:', err);
+        }
+    };
+    // Load matches on page load for default selection
+    loadBodyMatches();
+
+    // ─── Smart Swap Generation ─────────────────────────────────────────
+    document.getElementById('btn-gen-smart')?.addEventListener('click', async () => {
+        const source = document.getElementById('smart-source').value;
+        const target = document.getElementById('smart-target').value;
+
+        if (!target) {
+            showToast('No matching Pokémon available!', 'error');
+            return;
+        }
+        if (source === target) {
+            showToast('Pick two different Pokémon!', 'error');
+            return;
+        }
+
+        showLoading('Smart swapping...');
+        try {
+            const resp = await fetch('/api/generate/smart-swap', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ source, target }),
+            });
+            const data = await resp.json();
+            if (data.error) throw new Error(data.error);
+
+            const container = document.getElementById('smart-swap-results');
+            container.innerHTML = `
+                <div class="result-card">
+                    <img src="${data.source.image}" alt="${data.source.name}">
+                    <div class="result-label">${capitalize(data.source.name)}</div>
+                    <div class="result-meta">Source shape</div>
+                </div>
+                <div class="result-card">
+                    <img src="${data.target.image}" alt="${data.target.name}">
+                    <div class="result-label">${capitalize(data.target.name)}</div>
+                    <div class="result-meta">Target colors</div>
+                </div>
+                <div class="result-card" style="border-color: var(--accent-2);">
+                    <img src="${data.result.image}" alt="Result">
+                    <div class="result-label">✨ Result</div>
+                    <div class="result-meta">${data.result.label}</div>
+                </div>
+            `;
+
+            showToast('🧬 Smart swap complete!', 'success');
+        } catch (err) {
+            showToast(`Error: ${err.message}`, 'error');
+        }
+        hideLoading();
+    });
+
     // ─── UI Helpers ────────────────────────────────────────────────────
 
     function showLoading(text) {
