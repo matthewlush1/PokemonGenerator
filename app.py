@@ -439,6 +439,108 @@ def api_generate_smart_swap():
     })
 
 
+# ─── V3 ML Generation Endpoints ──────────────────────────────────────────────
+
+_ml_model = None
+_ml_device = None
+
+
+def _load_ml_model():
+    """Lazy-load the trained CVAE model."""
+    global _ml_model, _ml_device
+    if _ml_model is not None:
+        return _ml_model, _ml_device
+
+    import torch
+    checkpoint_path = PROJECT_ROOT / "ml" / "checkpoints" / "best.pt"
+    if not checkpoint_path.exists():
+        return None, None
+
+    # Device auto-detect
+    if torch.backends.mps.is_available():
+        _ml_device = torch.device("mps")
+    elif torch.cuda.is_available():
+        _ml_device = torch.device("cuda")
+    else:
+        _ml_device = torch.device("cpu")
+
+    from ml.cvae_model import ConditionalVAE, LATENT_DIM
+    from ml.sprite_dataset import COND_DIM
+
+    ckpt = torch.load(checkpoint_path, map_location=_ml_device, weights_only=False)
+    _ml_model = ConditionalVAE(
+        latent_dim=ckpt.get("latent_dim", LATENT_DIM),
+        cond_dim=ckpt.get("cond_dim", COND_DIM),
+    ).to(_ml_device)
+    _ml_model.load_state_dict(ckpt["model"])
+    _ml_model.eval()
+    print(f"  🧠 ML model loaded (epoch {ckpt.get('epoch', '?')})")
+    return _ml_model, _ml_device
+
+
+@app.route("/api/ml/status")
+def api_ml_status():
+    """Check if ML model is available."""
+    best_ckpt = PROJECT_ROOT / "ml" / "checkpoints" / "best.pt"
+    final_ckpt = PROJECT_ROOT / "ml" / "checkpoints" / "final.pt"
+    return jsonify({
+        "available": best_ckpt.exists() or final_ckpt.exists(),
+        "best_checkpoint": best_ckpt.exists(),
+        "final_checkpoint": final_ckpt.exists(),
+    })
+
+
+@app.route("/api/generate/ml", methods=["POST"])
+def api_generate_ml():
+    """Generate a new sprite using the trained CVAE model."""
+    import torch
+
+    model, device = _load_ml_model()
+    if model is None:
+        return jsonify({"error": "ML model not trained yet. Run: python3 -m ml.train_cvae"}), 400
+
+    data = request.json or {}
+    type1 = data.get("type1", "fire")
+    type2 = data.get("type2", None)
+    body_style = data.get("body_style", "bipedal")
+    stats = data.get("stats", {})
+    height = data.get("height", 1.0)
+    weight = data.get("weight", 20.0)
+    count = min(int(data.get("count", 4)), 12)
+
+    from ml.generate_new_pokemon import build_custom_condition, post_process_sprite
+
+    cond = build_custom_condition(
+        type1=type1, type2=type2, body_style=body_style,
+        hp=stats.get("hp", 80), atk=stats.get("atk", 80),
+        defense=stats.get("def", 80), spa=stats.get("spa", 80),
+        spd=stats.get("spd", 80), spe=stats.get("spe", 80),
+        height=height, weight=weight,
+    )
+
+    results = []
+    with torch.no_grad():
+        for i in range(count):
+            z = torch.randn(1, model.latent_dim).to(device)
+            c = cond.unsqueeze(0).to(device)
+            raw = model.decoder(z, c)[0]
+            processed = post_process_sprite(raw, num_colors=16, upscale=4)
+            results.append({
+                "image": sprite_to_base64(processed),
+                "label": f"Variant {i + 1}",
+            })
+
+    return jsonify({
+        "variants": results,
+        "config": {
+            "type1": type1,
+            "type2": type2,
+            "body_style": body_style,
+            "count": count,
+        },
+    })
+
+
 if __name__ == "__main__":
     # Ensure output dirs exist
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

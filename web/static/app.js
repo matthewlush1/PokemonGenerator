@@ -478,6 +478,87 @@ document.addEventListener('DOMContentLoaded', () => {
         hideLoading();
     });
 
+    // ─── ML Generate ───────────────────────────────────────────────────
+
+    // Setup ML stat sliders
+    ['hp', 'atk', 'def', 'spa', 'spd', 'spe', 'count'].forEach(stat => {
+        setupSlider(`ml-${stat}`, `ml-${stat}-val`);
+    });
+
+    // Check ML model status when tab is opened
+    async function checkMLStatus() {
+        const banner = document.getElementById('ml-status-banner');
+        try {
+            const resp = await fetch('/api/ml/status');
+            const data = await resp.json();
+            if (data.available) {
+                banner.style.display = 'block';
+                banner.className = 'ml-status-banner ready';
+                banner.textContent = '✅ ML model ready! Generate new Pokémon below.';
+            } else {
+                banner.style.display = 'block';
+                banner.className = 'ml-status-banner';
+                banner.textContent = '⏳ ML model not trained yet. Run: python3 -m ml.train_cvae';
+            }
+        } catch (err) {
+            banner.style.display = 'none';
+        }
+    }
+
+    // Check status when ML tab is clicked
+    document.querySelector('[data-mode="ml-gen"]')?.addEventListener('click', checkMLStatus);
+
+    // ML Generation
+    document.getElementById('btn-gen-ml')?.addEventListener('click', async () => {
+        const type1 = document.getElementById('ml-type1').value;
+        const type2 = document.getElementById('ml-type2').value || null;
+        const bodyStyle = document.getElementById('ml-body').value;
+        const count = parseInt(document.getElementById('ml-count').value);
+
+        const stats = {
+            hp: parseInt(document.getElementById('ml-hp').value),
+            atk: parseInt(document.getElementById('ml-atk').value),
+            def: parseInt(document.getElementById('ml-def').value),
+            spa: parseInt(document.getElementById('ml-spa').value),
+            spd: parseInt(document.getElementById('ml-spd').value),
+            spe: parseInt(document.getElementById('ml-spe').value),
+        };
+
+        showLoading('Neural network generating sprites...');
+        try {
+            const resp = await fetch('/api/generate/ml', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type1, type2, body_style: bodyStyle,
+                    stats, count,
+                }),
+            });
+            const data = await resp.json();
+            if (data.error) throw new Error(data.error);
+
+            const container = document.getElementById('ml-results');
+            container.innerHTML = '';
+
+            data.variants.forEach((variant, idx) => {
+                const card = document.createElement('div');
+                card.className = 'result-card';
+                card.style.animationDelay = `${idx * 0.08}s`;
+                card.innerHTML = `
+                    <img src="${variant.image}" alt="${variant.label}">
+                    <div class="result-label">${variant.label}</div>
+                    <div class="result-meta">${capitalize(type1)}${type2 ? '/' + capitalize(type2) : ''} ${capitalize(bodyStyle)}</div>
+                `;
+                container.appendChild(card);
+            });
+
+            showToast(`🧠 Generated ${data.variants.length} new sprites!`, 'success');
+        } catch (err) {
+            showToast(`Error: ${err.message}`, 'error');
+        }
+        hideLoading();
+    });
+
     // ─── UI Helpers ────────────────────────────────────────────────────
 
     function showLoading(text) {

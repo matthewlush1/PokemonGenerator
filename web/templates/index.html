@@ -69,6 +69,10 @@
                 <span class="tab-icon">🧬</span>
                 <span class="tab-label">Smart Swap</span>
             </button>
+            <button class="tab" data-mode="ml-gen">
+                <span class="tab-icon">🧠</span>
+                <span class="tab-label">ML Generate</span>
+            </button>
         </nav>
 
         <!-- ═══ Gallery Panel ═══ -->
@@ -290,6 +294,96 @@
                 </button>
             </div>
             <div class="results-area swap-results" id="smart-swap-results"></div>
+        </section>
+
+        <!-- ═══ ML Generate Panel ═══ -->
+        <section class="panel" id="panel-ml-gen">
+            <div class="panel-header">
+                <h2>🧠 ML Sprite Generator</h2>
+                <p class="panel-desc">Generate <strong>entirely new</strong> Pokémon sprites using a trained neural
+                    network. Set type, body style, and stats to control the output.</p>
+            </div>
+            <div id="ml-status-banner" class="ml-status-banner" style="display:none"></div>
+            <div class="gen-controls ml-controls">
+                <div class="ml-row">
+                    <div class="control-group">
+                        <label>Primary Type</label>
+                        <select id="ml-type1" class="select">
+                            {% for t in types %}
+                            <option value="{{ t }}">{{ t|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Secondary Type <small>(optional)</small></label>
+                        <select id="ml-type2" class="select">
+                            <option value="">None</option>
+                            {% for t in types %}
+                            <option value="{{ t }}">{{ t|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Body Style</label>
+                        <select id="ml-body" class="select">
+                            <option value="quadruped">Quadruped</option>
+                            <option value="bipedal" selected>Bipedal</option>
+                            <option value="humanoid">Humanoid</option>
+                            <option value="serpentine">Serpentine</option>
+                            <option value="winged">Winged</option>
+                            <option value="fish">Fish</option>
+                            <option value="blob">Blob</option>
+                            <option value="ball">Ball</option>
+                            <option value="tentacles">Tentacles</option>
+                            <option value="multi-head">Multi-Head</option>
+                            <option value="armored">Armored</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ml-row ml-stats-row">
+                    <div class="control-group">
+                        <label>HP</label>
+                        <input type="range" id="ml-hp" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-hp-val">80</span>
+                    </div>
+                    <div class="control-group">
+                        <label>ATK</label>
+                        <input type="range" id="ml-atk" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-atk-val">80</span>
+                    </div>
+                    <div class="control-group">
+                        <label>DEF</label>
+                        <input type="range" id="ml-def" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-def-val">80</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Sp.Atk</label>
+                        <input type="range" id="ml-spa" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-spa-val">80</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Sp.Def</label>
+                        <input type="range" id="ml-spd" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-spd-val">80</span>
+                    </div>
+                    <div class="control-group">
+                        <label>SPE</label>
+                        <input type="range" id="ml-spe" min="1" max="255" value="80" class="slider stat-slider">
+                        <span class="slider-value" id="ml-spe-val">80</span>
+                    </div>
+                </div>
+                <div class="ml-row">
+                    <div class="control-group">
+                        <label>Variants</label>
+                        <input type="range" id="ml-count" min="1" max="12" value="4" class="slider">
+                        <span class="slider-value" id="ml-count-val">4</span>
+                    </div>
+                    <button class="btn btn-primary btn-generate" id="btn-gen-ml">
+                        <span class="btn-icon">🧠</span> Generate New Pokémon
+                    </button>
+                </div>
+            </div>
+            <div class="results-area" id="ml-results"></div>
         </section>
     </main>
 
