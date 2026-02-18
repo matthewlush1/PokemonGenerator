@@ -156,43 +156,65 @@ def fetch_pokemon(pokemon_id: int) -> Dict[str, Any]:
     }
 
 
-def main():
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fetch Pokémon data from PokéAPI")
-    parser.add_argument("--limit", type=int, default=151,
-                        help="Number of Pokémon to fetch (default: 151 for Gen 1)")
-    parser.add_argument("--start", type=int, default=1,
-                        help="Starting Pokémon ID (default: 1)")
+    parser.add_argument("--limit", type=int, default=649, help="Max Pokémon ID (Gen 5 = 649)")
+    parser.add_argument("--delay", type=float, default=0.1, help="Delay between requests")
     args = parser.parse_args()
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    # Load existing data if present
-    existing = {}
+    # Load existing data
+    data = {}
     if OUTPUT_FILE.exists():
-        with open(OUTPUT_FILE) as f:
-            existing = json.load(f)
+        with open(OUTPUT_FILE, "r") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                pass
 
-    end_id = args.start + args.limit
-    total = args.limit
-    print(f"🔄 Fetching Pokémon #{args.start}–#{end_id - 1} from PokéAPI...")
+    print(f"Fetching data for first {args.limit} Pokémon...")
+    
+    # 1 to limit set
+    target_ids = list(range(1, args.limit + 1))
+    
+    # Filter out already fetched
+    # We key by name in JSON, but fetch by ID. 
+    # To be safe, just check if we have roughly enough entries or fetch missing.
+    # For simplicity, we just iterate IDs and skip if name exists? 
+    # Actually fetch_pokemon returns {name: data}. 
+    # Let's just run it. The script prints progress.
 
-    for i, pid in enumerate(range(args.start, end_id), 1):
-        try:
-            data = fetch_pokemon(pid)
-            existing.update(data)
-            name = list(data.keys())[0]
-            print(f"  [{i}/{total}] ✓ {name}")
-            # Rate limit: ~1 request per 0.5s (2 reqs per mon)
-            time.sleep(0.3)
-        except Exception as e:
-            print(f"  [{i}/{total}] ✗ ID {pid}: {e}")
+    fetched_count = 0
+    try:
+        for pid in target_ids:
+            # Check if we already have a pokemon with this ID
+            exists = False
+            for pdata in data.values():
+                if pdata.get("id") == pid:
+                    exists = True
+                    break
+            
+            if exists:
+                continue
 
-    # Write output
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump(existing, f, indent=2, ensure_ascii=False)
+            pdata = fetch_pokemon(pid)
+            data.update(pdata)
+            fetched_count += 1
+            print(f"[{pid}/{args.limit}] Fetched {list(pdata.keys())[0]}")
+            
+            # Save incrementally
+            if fetched_count % 10 == 0:
+                with open(OUTPUT_FILE, "w") as f:
+                    json.dump(data, f, indent=2)
+            
+            time.sleep(args.delay)
 
-    print(f"\n✅ Saved {len(existing)} Pokémon → {OUTPUT_FILE}")
-
-
-if __name__ == "__main__":
-    main()
+    except KeyboardInterrupt:
+        print("\nStopped by user.")
+    except Exception as e:
+        print(f"\nError: {e}")
+    finally:
+        with open(OUTPUT_FILE, "w") as f:
+            json.dump(data, f, indent=2)
+        print(f"Saved {len(data)} Pokémon to {OUTPUT_FILE}")

@@ -60,11 +60,17 @@ REQUEST_DELAY = 0.5  # seconds between requests
 
 
 def load_pokemon_names(data_dir: Path) -> dict:
-    """Load Pokémon names from the types JSON file."""
-    types_file = data_dir / "pokemon_types.json"
-    if types_file.exists():
-        with open(types_file) as f:
-            return json.load(f)
+    """Load Pokémon data from pokemon_data.json."""
+    data_file = data_dir / "pokemon_data.json"
+    if data_file.exists():
+        with open(data_file) as f:
+            try:
+                debug_data = json.load(f)
+                # Map name -> info
+                # The json is {name: {id: 1, ...}}
+                return debug_data
+            except:
+                pass
     return {}
 
 

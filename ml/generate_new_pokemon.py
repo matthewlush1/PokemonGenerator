@@ -168,19 +168,34 @@ def main():
         device = torch.device("cpu")
 
     # Load model
-    ckpt_path = CHECKPOINTS_DIR / args.checkpoint
-    if not ckpt_path.exists():
-        print(f"❌ No checkpoint found at {ckpt_path}")
-        print("   Train first: python3 -m ml.train_cvae")
-        return
+    # Priority: WGAN -> CVAE
+    wgan_ckpt = CHECKPOINTS_DIR.parent / "checkpoints_wgan" / "generator_latest.pt"
+    
+    if wgan_ckpt.exists():
+        print(f"✅ Loading WGAN-GP model from {wgan_ckpt}")
+        from ml.wgan_gp_model import Generator, LATENT_DIM
+        # WGAN needs same latent dim
+        model = Generator(latent_dim=LATENT_DIM, cond_dim=COND_DIM).to(device)
+        model.load_state_dict(torch.load(wgan_ckpt, map_location=device))
+        model_type = "wgan"
+    else:
+        # Fallback to CVAE if WGAN not found
+        ckpt_path = CHECKPOINTS_DIR / args.checkpoint
+        if not ckpt_path.exists():
+            print(f"❌ No checkpoint found. Train first: python3 -m ml.train_wgan")
+            return
 
-    ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
-    model = ConditionalVAE(
-        latent_dim=ckpt.get("latent_dim", LATENT_DIM),
-        cond_dim=ckpt.get("cond_dim", COND_DIM),
-    ).to(device)
-    model.load_state_dict(ckpt["model"])
-    print(f"✅ Loaded model from epoch {ckpt.get('epoch', '?')}")
+        print(f"⚠️ Loading legacy CVAE model from {ckpt_path}")
+        ckpt = torch.load(ckpt_path, map_location=device, weights_only=False)
+        from ml.cvae_model import ConditionalVAE, LATENT_DIM
+        model = ConditionalVAE(
+            latent_dim=ckpt.get("latent_dim", LATENT_DIM),
+            cond_dim=ckpt.get("cond_dim", COND_DIM),
+        ).to(device)
+        model.load_state_dict(ckpt["model"])
+        model_type = "cvae"
+    
+    model.eval()
 
     # Build condition
     cond = build_custom_condition(
@@ -190,18 +205,32 @@ def main():
         height=args.height, weight=args.weight,
     )
 
-    print(f"🔧 Generating {args.count} sprites:")
+    print(f"🔧 Generating {args.count} sprites ({model_type.upper()}):")
     print(f"   Type: {args.type1}" + (f"/{args.type2}" if args.type2 else ""))
     print(f"   Body: {args.body}")
     print(f"   Stats: HP={args.hp} ATK={args.atk} DEF={args.defense} "
           f"SpA={args.spa} SpD={args.spd} SPE={args.spe}")
 
     # Generate
-    raw_sprites = generate_sprites(model, cond, device, count=args.count)
+    results = []
+    with torch.no_grad():
+        for _ in range(args.count):
+            z = torch.randn(1, LATENT_DIM).to(device)
+            c = cond.unsqueeze(0).to(device)
+            
+            if model_type == "wgan":
+                # WGAN: Generator(z, c) -> [-1, 1]
+                raw = model(z, c)
+                raw = (raw + 1) / 2.0  # Map to [0, 1]
+            else:
+                # CVAE: Decoder(z, c) -> [0, 1]
+                raw = model.decoder(z, c)
+            
+            results.append(raw[0])
 
     # Post-process
     processed = [post_process_sprite(s, num_colors=args.colors, upscale=args.upscale)
-                 for s in raw_sprites]
+                 for s in results]
 
     # Save
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
