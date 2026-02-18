@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Sprite Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1 class="logo-text">SpriteGen</h1>
+                <span class="logo-badge">Pokémon</span>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-value" id="sprite-count">{{ sprites|length }}</span>
+                    <span class="stat-label">Sprites</span>
+                </div>
+                <button class="btn btn-download" id="btn-download-more" title="Download more Gen 1 sprites">
+                    <span class="btn-icon">↓</span> Download More
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Mode Selector Tabs -->
+        <nav class="mode-tabs">
+            <button class="tab active" data-mode="gallery">
+                <span class="tab-icon">🖼️</span>
+                <span class="tab-label">Gallery</span>
+            </button>
+            <button class="tab" data-mode="shiny">
+                <span class="tab-icon">✨</span>
+                <span class="tab-label">Shiny Gen</span>
+            </button>
+            <button class="tab" data-mode="palette">
+                <span class="tab-icon">🎨</span>
+                <span class="tab-label">Palette Swap</span>
+            </button>
+            <button class="tab" data-mode="type">
+                <span class="tab-icon">🔥</span>
+                <span class="tab-label">Type Swap</span>
+            </button>
+            <button class="tab" data-mode="sheet">
+                <span class="tab-icon">📋</span>
+                <span class="tab-label">Spritesheet</span>
+            </button>
+        </nav>
+
+        <!-- ═══ Gallery Panel ═══ -->
+        <section class="panel active" id="panel-gallery">
+            <div class="panel-header">
+                <h2>Sprite Gallery</h2>
+                <p class="panel-desc">Your downloaded Pokémon sprites. Click to select for generation.</p>
+            </div>
+            <div class="sprite-grid" id="gallery-grid">
+                {% for name in sprites %}
+                <div class="sprite-card" data-name="{{ name }}">
+                    <div class="sprite-img-wrap">
+                        <img src="" alt="{{ name }}" loading="lazy" class="sprite-img" id="img-{{ name }}">
+                    </div>
+                    <span class="sprite-name">{{ name }}</span>
+                </div>
+                {% endfor %}
+                {% if not sprites %}
+                <div class="empty-state">
+                    <span class="empty-icon">📦</span>
+                    <p>No sprites downloaded yet!</p>
+                    <button class="btn btn-primary" onclick="downloadMore()">Download Gen 1 Sprites</button>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- ═══ Shiny Gen Panel ═══ -->
+        <section class="panel" id="panel-shiny">
+            <div class="panel-header">
+                <h2>✨ Shiny Generator</h2>
+                <p class="panel-desc">Generate custom shiny color variants with hue and saturation shifts.</p>
+            </div>
+            <div class="gen-controls">
+                <div class="control-group">
+                    <label>Source Pokémon</label>
+                    <select id="shiny-source" class="select">
+                        {% for name in sprites %}
+                        <option value="{{ name }}">{{ name|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Variants</label>
+                    <input type="range" id="shiny-count" min="1" max="12" value="6" class="slider">
+                    <span class="slider-value" id="shiny-count-val">6</span>
+                </div>
+                <div class="control-group">
+                    <label>Hue Shift <small>(auto if blank)</small></label>
+                    <input type="number" id="shiny-hue" class="input" placeholder="30–330" min="0" max="360" step="1">
+                </div>
+                <div class="control-group">
+                    <label>Saturation <small>(auto if blank)</small></label>
+                    <input type="number" id="shiny-sat" class="input" placeholder="0.7–1.4" min="0" max="2" step="0.1">
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-shiny">
+                    <span class="btn-icon">✨</span> Generate Shinies
+                </button>
+            </div>
+            <div class="results-area" id="shiny-results"></div>
+        </section>
+
+        <!-- ═══ Palette Swap Panel ═══ -->
+        <section class="panel" id="panel-palette">
+            <div class="panel-header">
+                <h2>🎨 Palette Swap</h2>
+                <p class="panel-desc">Apply one Pokémon's color palette onto another's sprite shape.</p>
+            </div>
+            <div class="gen-controls swap-controls">
+                <div class="swap-selector">
+                    <div class="control-group">
+                        <label>Source Shape</label>
+                        <select id="palette-source" class="select">
+                            {% for name in sprites %}
+                            <option value="{{ name }}">{{ name|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="swap-arrow">→</div>
+                    <div class="control-group">
+                        <label>Target Colors</label>
+                        <select id="palette-target" class="select">
+                            {% for name in sprites %}
+                            <option value="{{ name }}" {% if loop.last %}selected{% endif %}>{{ name|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-palette">
+                    <span class="btn-icon">🎨</span> Swap Palette
+                </button>
+            </div>
+            <div class="results-area swap-results" id="palette-results"></div>
+        </section>
+
+        <!-- ═══ Type Swap Panel ═══ -->
+        <section class="panel" id="panel-type">
+            <div class="panel-header">
+                <h2>🔥 Type Swap</h2>
+                <p class="panel-desc">Recolor a Pokémon using a type's characteristic color palette.</p>
+            </div>
+            <div class="gen-controls">
+                <div class="control-group">
+                    <label>Source Pokémon</label>
+                    <select id="type-source" class="select">
+                        {% for name in sprites %}
+                        <option value="{{ name }}">{{ name|capitalize }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Target Type</label>
+                    <div class="type-buttons" id="type-buttons">
+                        {% for t in types %}
+                        <button class="type-btn type-{{ t }}" data-type="{{ t }}">{{ t|capitalize }}</button>
+                        {% endfor %}
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-type">
+                    <span class="btn-icon">🔥</span> Apply Type Colors
+                </button>
+            </div>
+            <div class="results-area swap-results" id="type-results"></div>
+        </section>
+
+        <!-- ═══ Spritesheet Panel ═══ -->
+        <section class="panel" id="panel-sheet">
+            <div class="panel-header">
+                <h2>📋 Spritesheet Builder</h2>
+                <p class="panel-desc">Assemble your sprites into an organized grid spritesheet.</p>
+            </div>
+            <div class="gen-controls">
+                <div class="control-group">
+                    <label>Columns</label>
+                    <input type="range" id="sheet-cols" min="1" max="12" value="3" class="slider">
+                    <span class="slider-value" id="sheet-cols-val">3</span>
+                </div>
+                <div class="control-group">
+                    <label>Rows</label>
+                    <input type="range" id="sheet-rows" min="1" max="8" value="1" class="slider">
+                    <span class="slider-value" id="sheet-rows-val">1</span>
+                </div>
+                <button class="btn btn-primary btn-generate" id="btn-gen-sheet">
+                    <span class="btn-icon">📋</span> Build Spritesheet
+                </button>
+            </div>
+            <div class="results-area" id="sheet-results"></div>
+        </section>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Generating...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

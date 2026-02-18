@@ -41,3 +41,17 @@ Thumbs.db
 
 # Output from generation
 SpriteGenerator/Dudes
+output/
+
+# Downloaded reference sprites
+Reference/pokemondb/
+Reference/pmdcollab/
+Reference/palettes/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
